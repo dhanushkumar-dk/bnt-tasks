@@ -19,6 +19,6 @@
   border: solid 2px black;
 }
 
-.box:nth-child(3) {
+.box:nth-child(3n) {
   background-color: red;
 }
