@@ -9,14 +9,15 @@
         position: relative;
         animation-name: boxmove;
         animation-duration: 4s;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
       }
 
       @keyframes boxmove {
-        0% {
+        from {
           left: 0px;
           top: 0px;
         }
-        25% {
+        to {
           left: 200px;
           top: 0px;
         }
