@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Countdown Stopwatch</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial;
+        margin-top: 100px;
+      }
+
+      #countdown {
+        font-size: 50px;
+        font-weight: bold;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Countdown Timer</h1>
+    <div id="countdown">10</div>
+
+    <script>
+      let timeLeft = 10; // You can change this to any starting time
+      let countdownElement = document.getElementById("countdown");
+
+      let timer = setInterval(function () {
+        countdownElement.textContent = timeLeft;
+        timeLeft--;
+
+        if (timeLeft < 0) {
+          clearInterval(timer); // stop the timer
+          countdownElement.textContent = "Time's up!";
+        }
+      }, 1000); // 1000ms = 1 second
+    </script>
+  </body>
+</html>

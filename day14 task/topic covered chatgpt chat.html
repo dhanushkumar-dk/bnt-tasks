@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript Concepts Overview</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        background: #fdfdfd;
+        color: #333;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #2c3e50;
+      }
+      pre {
+        background: #f4f4f4;
+        padding: 10px;
+        border-left: 4px solid #3498db;
+        overflow-x: auto;
+      }
+      code {
+        font-family: monospace;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1em;
+      }
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+      th {
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Concepts Overview</h1>
+
+    <h2>1. Function vs Arrow Function</h2>
+    <pre><code>// Function Declaration
+function add(a, b) {
+  return a + b;
+}
+
+// Arrow Function
+const addArrow = (a, b) => a + b;
+  </code></pre>
+
+    <h3>Comparison Table</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Function Declaration</th>
+          <th>Arrow Function</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Syntax</td>
+          <td>Verbose</td>
+          <td>Concise</td>
+        </tr>
+        <tr>
+          <td><code>this</code> binding</td>
+          <td>Dynamic</td>
+          <td>Lexical (inherits)</td>
+        </tr>
+        <tr>
+          <td>Usable as constructor</td>
+          <td>✅ Yes</td>
+          <td>❌ No</td>
+        </tr>
+        <tr>
+          <td><code>arguments</code> object</td>
+          <td>✅ Yes</td>
+          <td>❌ No</td>
+        </tr>
+        <tr>
+          <td>Suitable for methods</td>
+          <td>✅ Yes</td>
+          <td>⚠️ Not recommended</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>2. Advantages of Arrow Functions</h2>
+    <ul>
+      <li>✅ Lexical <code>this</code> binding (avoids rebinding)</li>
+      <li>✅ Concise syntax for small functions</li>
+      <li>
+        ✅ Works well with array methods: <code>map</code>, <code>filter</code>,
+        <code>reduce</code>
+      </li>
+      <li>✅ Cleaner callback syntax in promises or event handlers</li>
+    </ul>
+
+    <h2>3. Disadvantages of Arrow Functions</h2>
+    <ul>
+      <li>❌ Cannot be used as constructors with <code>new</code></li>
+      <li>❌ No access to <code>arguments</code> object</li>
+      <li>
+        ❌ Not suitable as object methods if you rely on <code>this</code>
+      </li>
+      <li>❌ Cannot use <code>super</code>, <code>new.target</code></li>
+    </ul>
+
+    <h2>4. Common Array Methods</h2>
+    <h3>Iteration & Transformation</h3>
+    <ul>
+      <li>
+        <code>map()</code>, <code>filter()</code>, <code>reduce()</code>,
+        <code>forEach()</code>
+      </li>
+      <li><code>some()</code>, <code>every()</code></li>
+      <li><code>find()</code>, <code>findIndex()</code></li>
+      <li><code>flatMap()</code></li>
+    </ul>
+
+    <h3>Manipulation & Sorting</h3>
+    <ul>
+      <li>
+        <code>sort()</code>, <code>reverse()</code>, <code>fill()</code>,
+        <code>copyWithin()</code>
+      </li>
+      <li>
+        <code>push()</code>, <code>pop()</code>, <code>shift()</code>,
+        <code>unshift()</code>, <code>splice()</code>
+      </li>
+      <li><code>slice()</code>, <code>concat()</code></li>
+    </ul>
+
+    <h3>Searching & Conversion</h3>
+    <ul>
+      <li>
+        <code>includes()</code>, <code>indexOf()</code>,
+        <code>lastIndexOf()</code>
+      </li>
+      <li><code>flat()</code>, <code>join()</code>, <code>toString()</code></li>
+    </ul>
+
+    <h2>5. <code>arguments</code> vs <code>...rest</code></h2>
+
+    <h3>Traditional <code>arguments</code></h3>
+    <pre><code>function showArgs() {
+  console.log(arguments); // array-like object
+}</code></pre>
+
+    <h3>Modern <code>...rest</code> (Recommended)</h3>
+    <pre><code>const showArgs = (...args) => {
+  console.log(args); // real array
+};</code></pre>
+
+    <h3>Comparison</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th><code>arguments</code></th>
+          <th><code>...rest</code></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Works in arrow functions</td>
+          <td>❌</td>
+          <td>✅</td>
+        </tr>
+        <tr>
+          <td>Real array</td>
+          <td>❌</td>
+          <td>✅</td>
+        </tr>
+        <tr>
+          <td>Modern syntax</td>
+          <td>❌</td>
+          <td>✅</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>6. All Uses of <code>...</code> (Spread / Rest)</h2>
+
+    <h3>1. Rest Parameters (function definition)</h3>
+    <pre><code>function total(...nums) {
+  return nums.reduce((a, b) => a + b, 0);
+}</code></pre>
+
+    <h3>2. Spread in Function Calls</h3>
+    <pre><code>const nums = [1, 2, 3];
+console.log(Math.max(...nums));</code></pre>
+
+    <h3>3. Spread in Arrays</h3>
+    <pre><code>const arr1 = [1, 2];
+const arr2 = [3, 4];
+const combined = [...arr1, ...arr2];</code></pre>
+
+    <h3>4. Spread in Objects</h3>
+    <pre><code>const user = { name: "Alice" };
+const updated = { ...user, age: 25 };</code></pre>
+
+    <h3>5. Rest in Object Destructuring</h3>
+    <pre><code>const { name, ...rest } = { name: "Bob", age: 30, city: "NY" };
+console.log(rest); // { age: 30, city: "NY" }</code></pre>
+
+    <h3>6. Rest in Array Destructuring</h3>
+    <pre><code>const [first, ...others] = [10, 20, 30];
+console.log(others); // [20, 30]</code></pre>
+  </body>
+</html>

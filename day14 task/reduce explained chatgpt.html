@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript reduce() Explained</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        line-height: 1.6;
+        background: #fdfdfd;
+        color: #333;
+        padding: 20px;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #2c3e50;
+      }
+      pre {
+        background: #f4f4f4;
+        padding: 10px;
+        border-left: 4px solid #3498db;
+        overflow-x: auto;
+      }
+      code {
+        font-family: monospace;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript <code>reduce()</code> Explained</h1>
+
+    <h2>📌 What is <code>reduce()</code>?</h2>
+    <p>
+      <code>reduce()</code> is a method used to transform an array into a single
+      value by executing a callback for each item and accumulating the result.
+    </p>
+
+    <h2>📖 Syntax</h2>
+    <pre><code>array.reduce((accumulator, currentValue, index, array) => {
+  // logic
+}, initialValue);</code></pre>
+
+    <h2>🔍 Parameters</h2>
+    <table>
+      <tr>
+        <th>Parameter</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><code>accumulator</code></td>
+        <td>Value returned in the last callback or the initial value</td>
+      </tr>
+      <tr>
+        <td><code>currentValue</code></td>
+        <td>Current element being processed</td>
+      </tr>
+      <tr>
+        <td><code>index</code></td>
+        <td>(Optional) Current index</td>
+      </tr>
+      <tr>
+        <td><code>array</code></td>
+        <td>(Optional) The array reduce was called on</td>
+      </tr>
+      <tr>
+        <td><code>initialValue</code></td>
+        <td>Initial value for the accumulator</td>
+      </tr>
+    </table>
+
+    <h2>✅ Example: Sum of Numbers</h2>
+    <pre><code>const numbers = [1, 2, 3, 4];
+const total = numbers.reduce((acc, curr) => acc + curr, 0);
+console.log(total); // 10</code></pre>
+
+    <h2>✅ Example Using All Parameters</h2>
+    <pre><code>const numbers = [10, 20, 30];
+
+const result = numbers.reduce((accumulator, currentValue, index, array) => {
+  console.log(`Index: ${index}`);
+  console.log(`Current Value: ${currentValue}`);
+  console.log(`Accumulator (before): ${accumulator}`);
+  console.log(`Original Array: [${array}]`);
+  
+  const updatedAccumulator = accumulator + currentValue;
+
+  console.log(`Accumulator (after): ${updatedAccumulator}`);
+  console.log('---------------------------');
+
+  return updatedAccumulator;
+}, 0);
+
+console.log(`Final Result: ${result}`);</code></pre>
+
+    <h2>🧠 Common Use Cases</h2>
+
+    <h3>1. Sum / Average</h3>
+    <pre><code>const average = numbers.reduce((acc, curr, i, arr) => acc + curr / arr.length, 0);</code></pre>
+
+    <h3>2. Flatten an Array</h3>
+    <pre><code>const nested = [[1, 2], [3, 4], [5]];
+const flat = nested.reduce((acc, curr) => acc.concat(curr), []);
+console.log(flat); // [1, 2, 3, 4, 5]</code></pre>
+
+    <h3>3. Count Occurrences</h3>
+    <pre><code>const fruits = ['apple', 'banana', 'apple'];
+const count = fruits.reduce((acc, fruit) => {
+  acc[fruit] = (acc[fruit] || 0) + 1;
+  return acc;
+}, {});
+console.log(count); // { apple: 2, banana: 1 }</code></pre>
+
+    <h3>4. Group By Property</h3>
+    <pre><code>const people = [
+  { name: 'Alice', age: 20 },
+  { name: 'Bob', age: 20 },
+  { name: 'Eve', age: 25 }
+];
+
+const grouped = people.reduce((acc, person) => {
+  (acc[person.age] = acc[person.age] || []).push(person);
+  return acc;
+}, {});
+
+console.log(grouped);
+// { 20: [Alice, Bob], 25: [Eve] }</code></pre>
+
+    <h2>⚠️ Common Mistakes</h2>
+    <ul>
+      <li>
+        <strong>❌ Not providing an <code>initialValue</code></strong> —
+        especially dangerous with empty arrays.
+      </li>
+      <li>
+        <strong>❌ Forgetting to return the <code>accumulator</code></strong>
+        inside the callback.
+      </li>
+    </ul>
+
+    <h2>🔄 reduce vs map vs forEach</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th><code>reduce()</code></th>
+          <th><code>map()</code></th>
+          <th><code>forEach()</code></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Returns value</td>
+          <td>✅ Single value (any type)</td>
+          <td>✅ New array</td>
+          <td>❌ Undefined</td>
+        </tr>
+        <tr>
+          <td>Best for</td>
+          <td>Aggregation (sum, grouping)</td>
+          <td>Transforming items</td>
+          <td>Side effects (logging, DOM)</td>
+        </tr>
+        <tr>
+          <td>Mutates original?</td>
+          <td>❌ No</td>
+          <td>❌ No</td>
+          <td>❌ No</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>✅ When to Use <code>reduce()</code>?</h2>
+    <ul>
+      <li>When transforming an array into a single value</li>
+      <li>When counting, grouping, aggregating</li>
+      <li>When you want functional and elegant solutions</li>
+    </ul>
+  </body>
+</html>

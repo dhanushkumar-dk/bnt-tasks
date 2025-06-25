@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Class Demo</title>
+    <style>
+      .highlight {
+        color: white;
+        background-color: blue;
+        padding: 5px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <p id="myElement">Hello, jQuery!</p>
+    <button id="addBtn">Add Class</button>
+    <button id="removeBtn">Remove Class</button>
+    <button id="toggleBtn">Toggle Class</button>
+
+    <script>
+      $("#addBtn").click(function () {
+        $("#myElement").addClass("highlight");
+      });
+
+      $("#removeBtn").click(function () {
+        $("#myElement").removeClass("highlight");
+      });
+
+      $("#toggleBtn").click(function () {
+        $("#myElement").toggleClass("highlight");
+      });
+    </script>
+  </body>
+</html>
