@@ -94,6 +94,7 @@ const ProductLists = () => {
       <li>Product 4</li>
       <li>Product 5</li>
       <li>Product 6</li> */}
+
       {/* 2nd */}
       {/* <Product name="Product 1" />
       <Product name="Product 2" />
@@ -138,7 +139,7 @@ const ProductLists = () => {
           <Product
             key={product.id}
             name={product.name}
-             quantity={product.quantity}
+            quantity={product.quantity}
           />
         ) : null;
       })}
