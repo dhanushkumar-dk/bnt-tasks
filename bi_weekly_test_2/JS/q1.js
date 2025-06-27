@@ -1,10 +1,23 @@
-// 1. Write a function to find the most repeated character in a string.
-// Example: "aabbbcc" → Output: "b"
+let str = "aabbbcc";
 
-let word = "aabbbcc".split("");
+let freq = {};
+let maxChar = "";
+let maxCount = 0;
 
-console.log(word);
+for (let char of str) {
+  // Count frequency
+  if (freq[char]) {
+    freq[char]++;
+  } else {
+    freq[char] = 1;
+  }
 
-for (let i = 0; i < word.length; i++) {
-  for (let j = 0; j < word.length; j++) {}
+  // Update max character and count
+  if (freq[char] > maxCount) {
+    maxChar = char;
+    maxCount = freq[char];
+  }
 }
+
+console.log("Most occurring character:", maxChar);
+console.log("Occurs:", maxCount, "times");

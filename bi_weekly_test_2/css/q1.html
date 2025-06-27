@@ -1,19 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Page Title</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="q1.css" />
-    <script src="main.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EM vs REM vs PX vs %</title>
+    <style>
+      html {
+        font-size: 16px; /* 1rem = 16px */
+      }
+
+      body {
+        font-size: 20px; /* Base font-size for body */
+      }
+
+      .px-example {
+        font-size: 24px; /* Fixed size */
+        background: lightcoral;
+      }
+
+      .em-example {
+        font-size: 2em; /* 2 x parent font-size = 2 x 20px = 40px */
+        background: lightgreen;
+      }
+
+      .rem-example {
+        font-size: 2rem; /* 2 x root html font-size = 2 x 16px = 32px */
+        background: lightblue;
+      }
+
+      .percent-example {
+        font-size: 150%; /* 150% of parent font-size = 1.5 x 20px = 30px */
+        background: lightgoldenrodyellow;
+      }
+    </style>
   </head>
   <body>
-    <div>
-      <p class="p1">Paragraph em</p>
-      <p class="p2">Paragraph rem</p>
-      <p class="p3">Paragraph px</p>
-      <p class="p4">Paragraph %</p>
-    </div>
+    <div class="px-example">This is px (24px)</div>
+    <div class="em-example">This is em (2em = 40px)</div>
+    <div class="rem-example">This is rem (2rem = 32px)</div>
+    <div class="percent-example">This is % (150% = 30px)</div>
   </body>
 </html>

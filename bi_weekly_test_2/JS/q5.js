@@ -1,7 +1,7 @@
 // Hoisting
 
-// console.log(a + 1);
-// console.log(b);
+console.log(a + 1);
+// console.log(b); // let variable produce error
 var a = 0;
 let b = 0;
 
