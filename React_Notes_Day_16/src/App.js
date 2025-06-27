@@ -17,6 +17,7 @@ function App() {
   }, [items]);
 
   const addItem = (item) => {
+    // High chance of getting error due to "fixing the id for new items based on the length", so it may .
     const id = items.length ? items[items.length - 1].id + 1 : 1;
     const myNewItem = { id, checked: false, item };
     const listItems = [...items, myNewItem];

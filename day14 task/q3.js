@@ -8,6 +8,13 @@ console.log(doubled); // [2, 4, 6, 8]
 const evens = numbers.filter((num) => num % 2 === 0);
 console.log(evens); // [2, 4]
 
+// > let j = 3;
+// undefined
+// > numbers = [1,2,3,4,5]
+// [ 1, 2, 3, 4, 5 ]
+// > console.log(numbers.filter((num) => num!=numbers[j]))
+// [ 1, 2, 3, 5 ]
+
 // Reduce
 const sum = numbers.reduce((acc, curr) => acc + curr, 0);
 console.log(sum); // 10
