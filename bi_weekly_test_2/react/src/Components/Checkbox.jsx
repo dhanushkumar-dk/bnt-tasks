@@ -19,9 +19,10 @@ function Checkbox() {
   return (
     <div>
       <h2>My Task List</h2>
-      <ul>
+      <ul style={{ textAlign: "start", padding: 0 }}>
+        {/* list start */}
         {items.map((item) => (
-          <li key={item.id} style={{ marginBottom: "10px" }}>
+          <li key={item.id} style={{ marginBottom: "10px", listStyle: "none" }}>
             <input
               type="checkbox"
               checked={item.checked}
@@ -38,6 +39,7 @@ function Checkbox() {
           </li>
         ))}
       </ul>
+      {/* list end */}
     </div>
   );
 }

@@ -1,13 +1,16 @@
 import React from "react";
 
-function ReusableUnputFeild({ label, placeholder, name, onChange }) {
+function ReusableUnputFeild({ type, label, placeholder, name, onChange }) {
   return (
     <div style={{ marginBottom: "15px" }}>
+      {/* Label Name */}
       <label htmlFor={name} style={{ display: "block", marginBottom: "5px" }}>
         {label}
       </label>
+
+      {/* Input  */}
       <input
-        type="text"
+        type={type}
         id={name}
         name={name}
         placeholder={placeholder}

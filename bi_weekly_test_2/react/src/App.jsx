@@ -12,6 +12,7 @@ import ControlledComponent from "./Components/ControlledComponent";
 import ReusableInputFeild from "./Components/ReusableInputFeild"; // ✅ import here
 import ItemList from "./Components/ItemList";
 import LoginForm from "./Components/LoginForm";
+import Child from "./Components/Child";
 
 function App() {
   const [inputValue, setInputValue] = useState("");
@@ -23,28 +24,48 @@ function App() {
   return (
     <>
       {/* <Counter /> */}
+
       {/* <ButtonToggle /> */}
+
+      {/* App.jsx as parent and passing props to child.jsx */}
+      {/* <Child message="Good Morning!" /> */}
+
+      {/* App.jsx as super grand parent, app -> grand parent -> parent -> child */}
       {/* <GrandParent /> */}
+
       {/* <ArrayNameMap /> */}
+
       {/* <Checkbox /> */}
-      {/* <CounterIncreaseReset /> */}
-      {/* <Todo /> */}
+
       {/* <ControlledComponent /> */}
 
       {/* ReusableInputFeild usage */}
       {/* <div style={{ padding: "20px" }}>
-        <h2>Reusable InputField Component Demo</h2>
         <ReusableInputFeild
+          type="text"
           label="Name"
           placeholder="Enter your name"
           name="username"
           onChange={handleChange}
         />
+        <ReusableInputFeild
+          type="number"
+          label="Age"
+          placeholder="Enter your age"
+          name="userage"
+          onChange={handleChange}
+        />
 
         <p>Typed Value: {inputValue}</p>
       </div> */}
+
       {/* <LoginForm /> */}
+
       {/* <ItemList /> */}
+
+      <Todo />
+
+      {/* <CounterIncreaseReset /> */}
     </>
   );
 }
