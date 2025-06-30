@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const ButtonToggle = () => {
-  const [data, setData] = useState("Hello");
+function ButtonToggle() {
+  const [greeting, setGreeting] = useState("Hello");
+
+  const handleToggle = () => {
+    setGreeting((prev) => (prev === "Hello" ? "Welcome back" : "Hello"));
+  };
+
   return (
-    <div className="container" style={{ display: "flex", gap: "1rem" }}>
-      <button
-        onClick={() => {
-          data !== data ? setData("Welcome Back") : setData("Hello");
-          setData("Welcome Back");
-        }}
-      >
-        {data}
-      </button>
+    <div>
+      <h2>{greeting}</h2>
+      <button onClick={handleToggle}>Toggle Greeting</button>
     </div>
   );
-};
+}
 
 export default ButtonToggle;

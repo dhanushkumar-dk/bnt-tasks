@@ -1,38 +1,45 @@
 import React, { useState } from "react";
 
-const DisplayCheck = ({ ItemName, checked }) => {
-  return (
-    <div style={{ display: "flex", flexDirection: "row", gap: "1rem" }}>
-      <input type="checkbox" checked={checked} />
-      {checked && <p>{ItemName} checked</p>}
-    </div>
-  );
-};
-
-const Checkbox = () => {
-  const [checkData, setCheckData] = useState([
-    { id: 1, ItemName: "Item1", checked: true },
-    { id: 2, ItemName: "Item2", checked: true },
-    { id: 3, ItemName: "Item3", checked: false },
+function Checkbox() {
+  const [items, setItems] = useState([
+    { id: 1, text: "Learn React", checked: false },
+    { id: 2, text: "Practice DSA", checked: false },
+    { id: 3, text: "Build Projects", checked: false },
   ]);
 
-  const checkmybox = (id) => {
-    setCheckData(...checkData);
+  // Toggle checkbox status
+  const handleCheckboxChange = (id) => {
+    setItems(
+      items.map((item) =>
+        item.id === id ? { ...item, checked: !item.checked } : item
+      )
+    );
   };
 
   return (
     <div>
+      <h2>My Task List</h2>
       <ul>
-        {checkData.map((item) => (
-          <DisplayCheck
-            key={item.id}
-            ItemName={item.ItemName}
-            checked={item.checked}
-          />
+        {items.map((item) => (
+          <li key={item.id} style={{ marginBottom: "10px" }}>
+            <input
+              type="checkbox"
+              checked={item.checked}
+              onChange={() => handleCheckboxChange(item.id)}
+            />
+            <span
+              style={{
+                textDecoration: item.checked ? "line-through" : "none",
+                marginLeft: "10px",
+              }}
+            >
+              {item.text}
+            </span>
+          </li>
         ))}
       </ul>
     </div>
   );
-};
+}
 
 export default Checkbox;
