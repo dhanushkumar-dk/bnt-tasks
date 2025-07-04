@@ -1,0 +1,11 @@
+traffic light : https://chatgpt.com/share/68679c7e-28fc-800d-b75a-872ac24632e3
+
+password_validator_with_error_handling : https://chatgpt.com/share/6867a3d3-1d68-800d-a18a-2d0475adad5a
+
+star rating : https://chatgpt.com/share/6867a7cf-6b40-800d-af76-fc74c1d31a66
+
+text transformer : https://chatgpt.com/share/6867ad83-abfc-800d-b47e-1c26d57668be
+
+phone number formatter : https://chatgpt.com/share/6867af96-a2b8-800d-8666-fc04587d208f
+
+multi tab form : https://chatgpt.com/share/6867b31a-bfc4-800d-ab25-993929b17195

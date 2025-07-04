@@ -1,0 +1,31 @@
+.traffic-light {
+  width: 100px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.light {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #555;
+  margin: auto;
+  transition: background-color 0.5s;
+}
+
+.light.red.on {
+  background-color: red;
+}
+
+.light.yellow.on {
+  background-color: yellow;
+}
+
+.light.green.on {
+  background-color: green;
+}
