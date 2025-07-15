@@ -1,0 +1,11 @@
+/* Remove margin and padding from body */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the container class has no padding on the left and right sides */
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
