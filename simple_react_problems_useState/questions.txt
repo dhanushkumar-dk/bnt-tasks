@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "Counter App",
+    "description": "Create a component with buttons to increment, decrement, and reset a counter."
+  },
+  {
+    "id": 2,
+    "title": "Toggle Visibility",
+    "description": "Create a button that shows or hides a paragraph when clicked."
+  },
+  {
+    "id": 3,
+    "title": "Controlled Input",
+    "description": "Create an input box that displays the text being typed below it in real-time."
+  },
+  {
+    "id": 4,
+    "title": "Click Tracker",
+    "description": "Display how many times a button has been clicked."
+  },
+  {
+    "id": 5,
+    "title": "Show/Hide Password",
+    "description": "Create a password input with a checkbox to show or hide the password."
+  },
+  {
+    "id": 6,
+    "title": "Greeting App",
+    "description": "Input a name and on clicking submit, show 'Hello, [name]!'"
+  },
+  {
+    "id": 7,
+    "title": "Light/Dark Mode Toggle",
+    "description": "Add a toggle to switch between light and dark background themes."
+  },
+  {
+    "id": 8,
+    "title": "List Renderer",
+    "description": "Given an array of names, render them as a list in the UI."
+  },
+  {
+    "id": 9,
+    "title": "Simple Form Validation",
+    "description": "Create a form with email and password fields. Show an error if either is empty on submit."
+  },
+  {
+    "id": 10,
+    "title": "Even/Odd Number Checker",
+    "description": "Create a number input that displays whether the number is even or odd as you type."
+  },
+  {
+    "id": 11,
+    "title": "Character Counter",
+    "description": "Create a textarea and display the character count as the user types. Limit input to 100 characters."
+  },
+  {
+    "id": 12,
+    "title": "Simple Todo App",
+    "description": "Add tasks to a list and display them. Each task should have a delete button."
+  },
+  {
+    "id": 13,
+    "title": "Temperature Converter",
+    "description": "Convert Celsius to Fahrenheit and vice versa as the user types."
+  },
+  {
+    "id": 14,
+    "title": "Tabs Component",
+    "description": "Create 3 tabs (Home, About, Contact). Clicking a tab shows its content."
+  },
+  {
+    "id": 15,
+    "title": "Accordion FAQ",
+    "description": "Show a list of FAQs. Clicking a question toggles its answer."
+  },
+  {
+    "id": 16,
+    "title": "Stopwatch",
+    "description": "Implement a stopwatch with start, stop, and reset functionality."
+  },
+  {
+    "id": 17,
+    "title": "Image Slider",
+    "description": "Create a basic image slider with next and previous buttons."
+  },
+  {
+    "id": 18,
+    "title": "Search Filter List",
+    "description": "Create a search box that filters a list of items in real-time."
+  },
+  {
+    "id": 19,
+    "title": "Form with Live Preview",
+    "description": "Create a form with name and bio inputs. Show a live preview as the user types."
+  },
+  {
+    "id": 20,
+    "title": "Theme Persistence with LocalStorage",
+    "description": "Build a dark/light mode toggle that remembers the choice using localStorage."
+  }
+]

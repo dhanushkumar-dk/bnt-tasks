@@ -9,16 +9,29 @@ import {
   ListRenderer,
   SimpleFormValidation,
   EvenOddChecker,
-} from "./Components/Components";
+} from "./Components/Difficulty_set_1";
+
+import {
+  AccordionFAQ,
+  CharacterCounter,
+  FormLivePreview,
+  ImageSlider,
+  PersistentThemeToggle,
+  SearchFilterList,
+  Stopwatch,
+  TabsComponent,
+  TemperatureConverter,
+  TodoApp,
+} from "./Components/Difficulty_set_2";
 
 function App() {
-  const Part1 = false;
+  const Part1 = true;
+  const Part2 = true;
 
   return (
     <>
       {Part1 && (
-        <div style={{ padding: "20px" }}>
-          <h1>React Beginner Component Demos</h1>
+        <>
           <CounterApp />
           <ToggleVisibility />
           <ControlledInput />
@@ -29,7 +42,21 @@ function App() {
           <ListRenderer />
           <SimpleFormValidation />
           <EvenOddChecker />
-        </div>
+        </>
+      )}
+      {Part2 && (
+        <>
+          <CharacterCounter />
+          <TodoApp />
+          <TemperatureConverter />
+          <TabsComponent />
+          <AccordionFAQ />
+          <Stopwatch />
+          <ImageSlider />
+          <SearchFilterList />
+          <FormLivePreview />
+          <PersistentThemeToggle />
+        </>
       )}
     </>
   );
