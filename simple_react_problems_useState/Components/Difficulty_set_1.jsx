@@ -93,12 +93,14 @@ export function GreetingApp() {
 // 7. Light/Dark Mode Toggle
 export function ThemeToggle() {
   const [dark, setDark] = useState(false);
+
   const style = {
     backgroundColor: dark ? "#333" : "#eee",
     color: dark ? "#fff" : "#000",
     padding: "20px",
     textAlign: "center",
   };
+
   return (
     <div style={style}>
       <h2>Light/Dark Mode</h2>

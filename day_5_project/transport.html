@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" href="./assets/icon.png" />
+
+    <title>Transport</title>
+
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main1.css" />
+    <script src="main.js"></script>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .main_container {
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .card-container {
+        align-items: center;
+        padding: 50px 20px;
+      }
+
+      .card-container h2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-bottom: 50px;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+
+      .card {
+        background-color: aliceblue;
+        border: 3px solid black;
+        box-shadow: 0 4px 10px grey;
+        width: 200px;
+        height: 170px;
+        border-radius: 12px;
+        display: flex;
+        /* flex-direction: column; */
+        justify-content: space-between;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card h3 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        color: white;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        padding-left: 10px;
+        /* font-size: 25px; */
+        /* padding: 120px 20px; */
+        /* margin-right: 170px; */
+      }
+
+      .book-btn {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        align-self: center;
+        margin: 15px;
+        cursor: pointer;
+      }
+
+      .book-btn:hover {
+        /* color: aqua; */
+        background-color: brown;
+      }
+
+      .first {
+        background-image: url(./assets/assets/train.jpeg);
+        background-size: cover;
+      }
+      .second {
+        background-image: url(./assets/assets/car1.jpg);
+        background-size: cover;
+      }
+
+      .third {
+        background-image: url(./assets/assets/bus.jpeg);
+        background-size: cover;
+      }
+
+      .fourth {
+        background-image: url(./assets/assets/car1.jpg);
+        background-size: cover;
+      }
+
+      .fifth {
+        background-image: url(./assets/assets/bus.jpeg);
+        background-size: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <div class="navbar">
+      <div class="navbar_1">
+        <div class="logo">
+          <img src="./assets/logo.png" alt="" />
+        </div>
+        <div class="logo_name">
+          <a style="text-decoration: none; color: #000" href="./index.html"
+            ><h1>Planner</h1></a
+          >
+        </div>
+      </div>
+      <div class="navbar_2">
+        <div class="nav_btn btn_1"><a href="./home.html">HOME</a></div>
+        <div class="nav_btn btn_2"><a href="./about.html">ABOUT</a></div>
+        <div class="nav_btn btn_3"><a href="./package.html">PACKAGES</a></div>
+        <div class="nav_btn btn_4"><a href="./hotel.html">HOTELS</a></div>
+        <div class="nav_btn btn_5">
+          <a href="./transport.html">TRANSPORT</a>
+        </div>
+        <!-- <div class="nav_btn btn_6"><a href="">DEV</a></div> -->
+        <div class="nav_btn btn_7"><a href="./login.html">login</a></div>
+        <div class="profil_img">
+          <img src="./assets/profile_black.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <!-- nav ends -->
+
+    <div class="main_container">
+      <div class="card-container">
+        <h2>Transport Booking</h2>
+        <div class="container">
+          <div class="card first"></div>
+          <div class="card second"></div>
+          <div class="card third"></div>
+        </div>
+
+        <div class="card-container">
+          <h2>Booking Rental Transport</h2>
+          <div class="container">
+            <div class="card fourth"></div>
+            <div class="card fifth"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer starts -->
+
+    <div class="maincontainer_false">
+      <div>
+        <div class="section footer">
+          <div class="footer_header">
+            <img id="airplane_img" src="" alt="" />
+            <h3 style="font-size: 3rem">Planner</h3>
+          </div>
+
+          <div class="footer_content_container">
+            <div class="ft_c_c_box">
+              <li class="first_element">About</li>
+              <li>Our Services</li>
+              <li>Our Partners</li>
+            </div>
+            <div class="ft_c_c_box">
+              <li class="first_element">Packages</li>
+              <li>Kerala</li>
+              <li>Ladakh</li>
+              <li>Kashmir</li>
+              <li>Goa</li>
+            </div>
+            <div class="ft_c_c_box">
+              <li class="first_element">Services</li>
+              <li>24 / 7 Customer Services</li>
+              <li>Travel Agencies</li>
+              <li>Guides</li>
+              <li>Hotels</li>
+            </div>
+            <div class="ft_c_c_box">
+              <li class="first_element">Bookings</li>
+              <li>Train Booking</li>
+              <li>Cab Booking</li>
+              <li>Bus Booking</li>
+            </div>
+            <div class="ft_c_c_box">
+              <li class="first_element">Transport</li>
+              <li>Cab Rental</li>
+              <li>Bus Rental</li>
+            </div>
+          </div>
+          <hr style="height: 2px; background-color: #554aa5; border: none" />
+          <div class="social_media_icons">
+            <img src="./assets/facebook.png" alt="" />
+            <img src="./assets/x_logo_new.webp" alt="" />
+            <img src="./assets/instagram_logo_new.png" alt="" />
+          </div>
+          <p style="text-align: center">
+            @Planner Pvt.Ltd. <br />Country India.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
+  </body>
+</html>

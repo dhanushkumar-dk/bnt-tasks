@@ -26,7 +26,7 @@ import {
 
 function App() {
   const Part1 = true;
-  const Part2 = true;
+  const Part2 = false;
 
   return (
     <>
