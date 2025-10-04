@@ -1,0 +1,24 @@
+1. countdown
+
+2. obj using this
+
+3. map, filter, reduce
+
+4. try catch finally
+
+5. jquery (get and set values in form elements)
+
+6. how do you manipulate html content using Jquery
+
+7. how do you (add, remove toggle classes in jq)
+
+8. how do you handle events in jq with example
+
+9. how can you animate an element using jq
+
+10. arrow fun vs normal fun with example (can done inside object as well)
+
+
+event capturing
+event bubling
+closure

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React: Functional vs Class Components</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 40px;
+      }
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        text-align: left;
+        background-color: #fff;
+      }
+      th {
+        background-color: #e8f0fe;
+      }
+    </style>
+  </head>
+  <body>
+    <p style="text-align: end">
+      <a href="https://chatgpt.com/share/68625828-6d30-800d-b016-a1a844103db6"
+        >more references</a
+      >
+    </p>
+    <h1>Comparison: Functional vs Class Components in React</h1>
+
+    <h2>Core Differences</h2>
+    <table>
+      <tr>
+        <th>Feature</th>
+        <th>Functional Component</th>
+        <th>Class Component</th>
+      </tr>
+      <tr>
+        <td>Syntax</td>
+        <td>JavaScript function</td>
+        <td>Class extending React.Component</td>
+      </tr>
+      <tr>
+        <td>State Management</td>
+        <td>useState Hook</td>
+        <td>this.state and this.setState</td>
+      </tr>
+      <tr>
+        <td>Lifecycle Methods</td>
+        <td>useEffect</td>
+        <td>componentDidMount, etc.</td>
+      </tr>
+      <tr>
+        <td>this Keyword</td>
+        <td>Not used</td>
+        <td>Required</td>
+      </tr>
+      <tr>
+        <td>Hooks Support</td>
+        <td>✅ Yes</td>
+        <td>❌ No</td>
+      </tr>
+      <tr>
+        <td>Boilerplate</td>
+        <td>Minimal</td>
+        <td>More verbose</td>
+      </tr>
+      <tr>
+        <td>Performance</td>
+        <td>Generally better</td>
+        <td>Slightly heavier</td>
+      </tr>
+      <tr>
+        <td>Constructor</td>
+        <td>Not needed</td>
+        <td>Often required</td>
+      </tr>
+      <tr>
+        <td>Component Declaration</td>
+        <td>Function or arrow function</td>
+        <td>Class with render() method</td>
+      </tr>
+      <tr>
+        <td>Code Readability</td>
+        <td>Concise</td>
+        <td>Verbose</td>
+      </tr>
+    </table>
+
+    <h2>Advanced Differences</h2>
+    <table>
+      <tr>
+        <th>Aspect</th>
+        <th>Functional Component</th>
+        <th>Class Component</th>
+      </tr>
+      <tr>
+        <td>Refs Handling</td>
+        <td>useRef()</td>
+        <td>createRef()</td>
+      </tr>
+      <tr>
+        <td>Error Boundaries</td>
+        <td>❌ Not supported</td>
+        <td>✅ componentDidCatch()</td>
+      </tr>
+      <tr>
+        <td>Lazy State Initialization</td>
+        <td>useState(() => fn())</td>
+        <td>In constructor</td>
+      </tr>
+      <tr>
+        <td>Render Optimization</td>
+        <td>React.memo, useCallback</td>
+        <td>PureComponent, shouldComponentUpdate</td>
+      </tr>
+      <tr>
+        <td>SSR</td>
+        <td>More efficient</td>
+        <td>Heavier</td>
+      </tr>
+      <tr>
+        <td>Context API</td>
+        <td>useContext</td>
+        <td>contextType or Consumer</td>
+      </tr>
+      <tr>
+        <td>Custom Hook Support</td>
+        <td>✅ Yes</td>
+        <td>❌ No</td>
+      </tr>
+      <tr>
+        <td>Encapsulation</td>
+        <td>Can use closures</td>
+        <td>Can use private class fields</td>
+      </tr>
+      <tr>
+        <td>Side Effect Control</td>
+        <td>useEffect with cleanup</td>
+        <td>componentWillUnmount</td>
+      </tr>
+      <tr>
+        <td>Testing Simplicity</td>
+        <td>Easy with hooks</td>
+        <td>Requires lifecycle awareness</td>
+      </tr>
+      <tr>
+        <td>Code Reusability</td>
+        <td>Custom hooks</td>
+        <td>HOCs or render props</td>
+      </tr>
+      <tr>
+        <td>Display Name</td>
+        <td>Can set displayName manually</td>
+        <td>Inferred from class name</td>
+      </tr>
+    </table>
+
+    <h2>React Internals & Lifecycle Nuances</h2>
+    <table>
+      <tr>
+        <th>Detail</th>
+        <th>Functional</th>
+        <th>Class</th>
+      </tr>
+      <tr>
+        <td>Lifecycle Control</td>
+        <td>useEffect with deps</td>
+        <td>Granular lifecycle methods</td>
+      </tr>
+      <tr>
+        <td>Component Identity</td>
+        <td>New on each render</td>
+        <td>Persistent instance</td>
+      </tr>
+      <tr>
+        <td>State Merging</td>
+        <td>Manual</td>
+        <td>Auto merge via setState</td>
+      </tr>
+      <tr>
+        <td>Hook Rules</td>
+        <td>Strict rules (must be top-level)</td>
+        <td>No such constraints</td>
+      </tr>
+      <tr>
+        <td>Hot Reload</td>
+        <td>Better with hooks</td>
+        <td>May reset state</td>
+      </tr>
+      <tr>
+        <td>Strict Mode Behavior</td>
+        <td>Double invocation</td>
+        <td>No double invocation</td>
+      </tr>
+      <tr>
+        <td>Memory Usage</td>
+        <td>Lower</td>
+        <td>Higher (due to instance)</td>
+      </tr>
+      <tr>
+        <td>Event Handler Binding</td>
+        <td>No binding needed</td>
+        <td>Binding required</td>
+      </tr>
+      <tr>
+        <td>Async Code in Lifecycle</td>
+        <td>Cleaner with useEffect</td>
+        <td>More complex</td>
+      </tr>
+      <tr>
+        <td>Debugging</td>
+        <td>Hook names often lost</td>
+        <td>Method names visible</td>
+      </tr>
+    </table>
+
+    <h2>Use Cases</h2>
+    <table>
+      <tr>
+        <th>Scenario</th>
+        <th>Functional Component</th>
+        <th>Class Component</th>
+      </tr>
+      <tr>
+        <td>New Projects</td>
+        <td>✅ Preferred</td>
+        <td>❌ Not recommended</td>
+      </tr>
+      <tr>
+        <td>Legacy Projects</td>
+        <td>⚠️ Might need conversion</td>
+        <td>✅ Common</td>
+      </tr>
+      <tr>
+        <td>Error Boundaries</td>
+        <td>❌ Not directly</td>
+        <td>✅ Use componentDidCatch</td>
+      </tr>
+      <tr>
+        <td>Shared Logic</td>
+        <td>✅ Custom hooks</td>
+        <td>HOC / Render Props</td>
+      </tr>
+      <tr>
+        <td>Teaching OOP</td>
+        <td>❌ Less aligned</td>
+        <td>✅ Useful for OOP concepts</td>
+      </tr>
+      <tr>
+        <td>Server Components</td>
+        <td>✅ Compatible</td>
+        <td>❌ Not supported</td>
+      </tr>
+      <tr>
+        <td>Concurrent Features</td>
+        <td>✅ Optimized</td>
+        <td>⚠️ Not future proof</td>
+      </tr>
+    </table>
+    <p style="text-align: end">
+      <a href="https://legacy.reactjs.org/docs/hooks-rules.html"
+        >React hook rules more references</a
+      >
+    </p>
+  </body>
+</html>

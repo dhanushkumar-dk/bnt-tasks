@@ -1,0 +1,44 @@
+intro web site, domain, server, 
+
+
+tags
+
+txt formatting
+
+list [ul ol dl]
+
+semantic tags
+
+
+obs, rel refs
+
+
+tables [col, row span]
+
+
+html forms [various input types]
+
+
+local storage. session storage
+
+
+=======================================
+css
+
+positioning
+
+box model
+
+typography
+
+pseudo classes
+
+selectors
+
+display [block, inline-block, flex]
+
+animations
+
+transform [translate-x / y]
+
+overflow []

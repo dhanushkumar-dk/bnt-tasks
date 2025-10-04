@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="events.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <style>
+      .artist-card {
+        min-width: 220px;
+        /* background-color: #1f1f2e; */
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+      }
+
+      .artist-card:hover {
+        transform: scale(1.05);
+      }
+
+      .artist-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .card-body-custom {
+        background-color: #feca34;
+        /* color: black; */
+        padding: 10px 15px;
+      }
+
+      .card-title {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      .creator {
+        font-size: 0.85rem;
+        color: #333;
+      }
+
+      .likes {
+        font-size: 0.85rem;
+      }
+
+      .likes i {
+        color: red;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="text-white sticky-top bg-dark">
+      <div class="container pt-3 pb-3">
+        <div class="row">
+          <div class="col my-2">
+            <nav class="navbar navbar-expand-md navbar-dark">
+              <div class="container">
+                <a href="#" class="navbar-brand"
+                  ><h1
+                    style="
+                      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                        'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+                        'Open Sans', 'Helvetica Neue', sans-serif;
+                    "
+                  >
+                    Artists Hub
+                  </h1></a
+                >
+
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mainNavbar"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar items -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                  <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                      <a href="./index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./events.html" class="nav-link active">Events</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="./aboutus.html" class="nav-link active">About</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- About Section -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <h2 class="mb-4 fw-bold">About Artist's Collaboration Hub</h2>
+            <p class="lead">
+              Welcome to <strong>Artist's Collaboration Hub</strong> - a dynamic
+              platform built to empower artists of all genres to connect, share,
+              and grow together. Whether you're a musician, dancer, painter, or
+              digital creator - our hub is your virtual stage.
+            </p>
+            <p class="fs-5">
+              Here, artists can easily
+              <strong>collaborate on projects</strong>, post and
+              <strong>book events effortlessly</strong>, and build long-lasting
+              creative partnerships across the globe. From small-town talents to
+              international performers, our platform bridges artistic
+              communities like never before.
+            </p>
+            <p class="fs-5">
+              The app features a user-friendly interface to share portfolios,
+              discover new talent, promote upcoming events, and even rent
+              instruments or equipment when needed.
+            </p>
+            <p class="fs-5 text-muted">
+              With Artist's Collaboration Hub, the world is your audience - and
+              your next collaboration is just a click away.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Artists Card Start -->
+    <section class="popular-section">
+      <div class="container">
+        <h2 class="text-center pt-5 mb-4">Popular Artists</h2>
+
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 d-flex justify-content-between"
+        >
+          <!-- artist Card 1 -->
+          <div class="col my-2">
+            <div class="artist-card h-100">
+              <img
+                src="./assets/artist1.jpg"
+                class="artist-image"
+                alt="Asphalt"
+              />
+              <div
+                class="card-body-custom d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <p class="card-title py-2">Yuvan</p>
+                  <p class="creator">
+                    <span class="p-1 bg-dark text-white rounded">follow</span>
+                  </p>
+                </div>
+                <div class="text-end">
+                  <p class="eth">-</p>
+                  <p class="likes">
+                    <i class="bi bi-heart-fill"></i> 50k followers
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- artist Card 2 -->
+          <div class="col my-2">
+            <div class="artist-card h-100">
+              <img src="./assets/artist2.jpg" class="artist-image" alt="Ludo" />
+              <div
+                class="card-body-custom d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <p class="card-title py-2">G.V Prakash</p>
+                  <p class="creator">
+                    <span class="p-1 bg-dark text-white rounded">follow</span>
+                  </p>
+                </div>
+                <div class="text-end">
+                  <p class="eth">-</p>
+                  <p class="likes">
+                    <i class="bi bi-heart-fill"></i> 22k followers
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- artist Card 3 -->
+          <div class="col my-2">
+            <div class="artist-card h-100">
+              <img src="./assets/artist3.jpg" class="artist-image" alt="GTA" />
+              <div
+                class="card-body-custom d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <p class="card-title py-2">Hip Hop Adhi</p>
+                  <p class="creator">
+                    <span class="p-1 bg-dark text-white rounded">follow</span>
+                  </p>
+                </div>
+                <div class="text-end">
+                  <p class="eth">-</p>
+                  <p class="likes">
+                    <i class="bi bi-heart-fill"></i> 18k followers
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- artist Card 4 -->
+          <div class="col my-2">
+            <div class="artist-card h-100">
+              <img
+                src="./assets/artist4.jpg"
+                class="artist-image"
+                alt="Minecraft"
+              />
+              <div
+                class="card-body-custom d-flex justify-content-between align-items-center"
+              >
+                <div>
+                  <p class="card-title py-2">Sid Sriram</p>
+                  <p class="creator">
+                    <span class="p-1 bg-dark text-white rounded">follow</span>
+                  </p>
+                </div>
+                <div class="text-end">
+                  <p class="eth">-</p>
+                  <p class="likes">
+                    <i class="bi bi-heart-fill"></i> 35k followers
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Artists Card End -->
+
+    <!-- Footer Starting -->
+
+    <div
+      class="d-flex flex-column align-items-center justify-content-center my-5 mx-3"
+    >
+      <!-- Quick Links Start -->
+      <div class="bg-light p-3 rounded shadow-sm">
+        <ul class="nav justify-content-center align-items-center flex-wrap">
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#">Cities</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#">Venues</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#">Festivals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#"
+              >Hub for Artist</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#"
+              >Artists Hub Pro</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark fw-semibold" href="#">Help</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Quick Links End -->
+      <div class="container">
+        <div class="row py-5 text-center text-lg-start">
+          <!-- Logo and Title -->
+          <div
+            class="col-12 col-lg-3 d-flex flex-row align-items-center justify-content-center justify-content-lg-start gap-2 mb-3 mb-lg-0"
+          >
+            <img
+              src="./assets/bndsntwon_logo.png"
+              alt="Logo"
+              style="height: 50px"
+            />
+            <p class="m-0 fs-3 fw-bold">Artist's Hub</p>
+          </div>
+
+          <!-- Copyright and Policies -->
+          <div
+            class="col-12 col-lg-6 d-flex flex-column align-items-center justify-content-center gap-1"
+          >
+            <p class="m-0">© 2011-2025 Bandsintown, LLC</p>
+            <p class="m-0">Terms of Use | Privacy Policy | Cookie Policy</p>
+            <p class="m-0">GDPR/CCPA Privacy Request | Cookie Settings</p>
+          </div>
+
+          <!-- Socials and Language Selector -->
+          <div
+            class="col-12 col-lg-3 d-flex flex-column align-items-center align-items-lg-end gap-2 mt-3 mt-lg-0"
+          >
+            <div class="d-flex gap-2">
+              <img
+                src="./assets/facebook.png"
+                alt="Facebook"
+                style="height: 30px"
+              />
+              <img
+                src="./assets/x_logo_new.webp"
+                alt="Twitter"
+                style="height: 30px"
+              />
+              <img
+                src="./assets/instagram_logo_new.png"
+                alt="Instagram"
+                style="height: 30px"
+              />
+            </div>
+            <select
+              name="language"
+              id="lang_selector"
+              class="p-1 rounded-pill mt-2"
+            >
+              <option value="English">English</option>
+              <option value="Espanol">Español</option>
+              <option value="Francais">Français</option>
+              <option value="Portugues">Português</option>
+              <option value="Deutsch">Deutsch</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!-- Quick Links End -->
+    </div>
+    <!-- Footer Ending -->
+  </body>
+</html>

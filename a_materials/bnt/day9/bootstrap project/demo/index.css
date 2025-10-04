@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#banner_part {
+  background-image: url(./assets/ducati_header_bg_img.webp);
+}
+
+.header-banner {
+  background-image: url("./assets/motogp_riders_2025g_1200.webp");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+  color: white;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.header-subtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+}

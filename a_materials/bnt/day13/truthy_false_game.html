@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <!-- <script src="main.js"></script> -->
+  </head>
+  <body>
+    <!-- <script>
+      function truthy_false() {
+        const falsy_choices = ["false", "0", "undefined", "NaN", '""'];
+        const truthy_choices = ["true", "1", "hello", "[]", "{}", '"0"', "-1"];
+
+        let validInputs = 0;
+        let score = 0;
+
+        while (validInputs < 5) {
+          const userInput = prompt(
+            `Enter a value (try among: ${truthy_choices
+              .concat(falsy_choices)
+              .join(", ")}):`
+          );
+
+          if (truthy_choices.includes(userInput)) {
+            score += 1;
+            validInputs++;
+          } else if (falsy_choices.includes(userInput)) {
+            score -= 1;
+            validInputs++;
+          } else {
+            alert("Invalid input. Please try again with a valid option.");
+          }
+        }
+
+        alert(`Game over! Your final score is: ${score}`);
+      }
+
+      truthy_false();
+    </script> -->
+    <script>
+      (function truthyFalsyGame() {
+        const truthyValues = [
+          true,
+          1,
+          "hello",
+          [],
+          {},
+          "0",
+          -1,
+          "false",
+          Infinity,
+          function () {},
+        ];
+        const falsyValues = [false, 0, "", undefined, null, NaN];
+
+        const totalRounds = 5;
+        let score = 0;
+
+        alert(
+          "🎮 Welcome to the Truthy-Falsy Game!\n\nYou will be shown 5 random values.\nType 'yes' if the value is truthy.\nType 'no' if the value is falsy."
+        );
+
+        for (let i = 0; i < totalRounds; i++) {
+          const isTruthy = Math.random() > 0.5;
+          const value = isTruthy
+            ? truthyValues[Math.floor(Math.random() * truthyValues.length)]
+            : falsyValues[Math.floor(Math.random() * falsyValues.length)];
+
+          // Show value (stringified for empty objects or functions)
+          let displayValue =
+            typeof value === "function"
+              ? "function() {}"
+              : JSON.stringify(value);
+
+          const answer = prompt(
+            ` Round ${
+              i + 1
+            }:\nIs this value truthy?\n\n👉 ${displayValue}\n(yes / no)`
+          );
+
+          if (answer === null) {
+            alert("You cancelled the game.");
+            return;
+          }
+
+          const cleanedAnswer = answer.trim().toLowerCase();
+          const isCorrect =
+            (isTruthy && cleanedAnswer === "yes") ||
+            (!isTruthy && cleanedAnswer === "no");
+
+          if (isCorrect) {
+            alert(" Correct!");
+            score++;
+          } else {
+            alert(" Incorrect!");
+          }
+        }
+
+        alert(` Game Over!\nYou scored ${score} out of ${totalRounds}.`);
+
+        const playAgain = confirm("Do you want to play again?");
+        if (playAgain) {
+          truthyFalsyGame();
+        }
+      })();
+    </script>
+  </body>
+</html>

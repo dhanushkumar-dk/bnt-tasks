@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .highlight {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="text">Hello, I am a paragraph!</p>
+    <button onclick="addClass()">Add Class</button>
+    <button onclick="removeClass()">Remove Class</button>
+    <button onclick="toggleClass()">Toggle Class</button>
+    <button onclick="checkClass()">Check Class</button>
+    <p id="result"></p>
+
+    <script>
+      let element = document.getElementById("text");
+      console.log(element);
+      console.log(element.textContent);
+      
+      function addClass() {
+        element.classList.add("highlight");
+      }
+
+      function removeClass() {
+        element.classList.remove("highlight");
+      }
+
+      function toggleClass() {
+        element.classList.toggle("highlight");
+      }
+
+      function checkClass() {
+        const hasClass = element.classList.contains("highlight");
+        console.log(hasClass);
+        document.getElementById("result").textContent = hasClass
+          ? "Class 'highlight' is present "
+          : "Class 'highlight' is NOT present ";
+      }
+    </script>
+  </body>
+</html>

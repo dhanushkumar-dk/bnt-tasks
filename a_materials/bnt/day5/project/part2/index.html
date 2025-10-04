@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class="maincontainer">
+        <div class="header">
+          <div class="left">
+            <img src="./assets/airplane.png" alt="logo" />
+            <h3 id="Planner_Name">Planner</h3>
+          </div>
+
+          <div class="navbar">
+            <li>Home</li>
+            <li>About</li>
+            <li>Packages</li>
+            <li>Hotels</li>
+            <li>Transport</li>
+          </div>
+
+          <div class="logos">
+            <img
+              id="profile_logo_nav"
+              src="./assets/profile_logo_nav.webp"
+              alt="profile logo"
+            />
+            <p class="lang_EN_Logo">EN</p>
+          </div>
+        </div>
+
+        <div class="content_box_container">
+          <div class="cbc_item1">
+            <li id="cdc_item1_toggle">Mode of Shelter</li>
+            <div class="hidden_content_container">
+              <li class="hidden_items">Apartment</li>
+              <li class="hidden_items">Camp Site</li>
+              <li class="hidden_items">Hotel</li>
+              <li class="hidden_items">Resort</li>
+              <li class="hidden_items">Villas</li>
+            </div>
+          </div>
+          <div class="cbc_item2">
+            <div>
+              <input type="radio" name="rad1" />
+              <label for="rad1">One Way</label>
+            </div>
+            <div>
+              <input type="radio" name="rad2" />
+              <label for="rad2">Round Trip</label>
+            </div>
+            <div>
+              <input type="radio" name="rad3" />
+              <label for="rad3">Multi City</label>
+            </div>
+          </div>
+
+          <div class="cbc_item3">
+            <div class="cbc_item3_box_container">
+              <div
+                class="cbc_item3_box"
+                style="border-radius: 15px 0px 0px 15px"
+              >
+                <p class="cbc_i3_b_p">From</p>
+                <p class="cbc_i3_b_p">NYC, All Airports US</p>
+              </div>
+              <div class="cbc_item3_box">
+                <p class="cbc_i3_b_p">To</p>
+                <p class="cbc_i3_b_p">DEL, Delhi Airport India</p>
+              </div>
+              <div class="cbc_item3_box">
+                <p class="cbc_i3_b_p">Departure</p>
+                <p class="cbc_i3_b_p">
+                  <span style="font-weight: bold">6 Aug 24</span>
+                </p>
+                <p class="cbc_i3_b_p">Tuesday</p>
+              </div>
+              <div class="cbc_item3_box">
+                <p class="cbc_i3_b_p">Return</p>
+                <p class="cbc_i3_b_p">
+                  Tap to add a return datee for bigger discounts
+                </p>
+              </div>
+              <div
+                class="cbc_item3_box"
+                style="border-radius: 0px 15px 15px 0px"
+              >
+                <p class="cbc_i3_b_p">Travellers & Class</p>
+                <p class="cbc_i3_b_p">
+                  <span style="font-weight: bold">1 Traveller</span>
+                </p>
+                <p class="cbc_i3_b_p">Economy/Premium Economy</p>
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              <p style="text-align: center" id="cbc_i3_b_p_search">Search</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

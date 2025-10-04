@@ -1,0 +1,27 @@
+h1 - h6
+p
+hr
+br
+b - bold
+pre
+div
+i
+u
+strong
+name {
+    ul, ol, dl, dt
+    li 
+}
+
+del
+mark
+
+colors
+
+txt colors
+
+img tag
+
+loading lazy etc (h, width)
+
+table [cell spacing]

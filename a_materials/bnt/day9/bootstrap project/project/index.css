@@ -1,0 +1,18 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header-banner {
+  background: linear-gradient(180deg, #0053cc 26.69%, #00cec8 66.18%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 42px 27px 37px;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+  height: 100%;
+}

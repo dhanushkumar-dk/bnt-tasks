@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS String Methods</title>
+  </head>
+  <body>
+    <script>
+      // setTimeout(() => console.log("Hello after 2 second"), 2000);
+
+      // let count = 0;
+      // let intervalId = setInterval(() => {
+      //   console.log("Interval:", count);
+      //   count++;
+      //   if (count > 3) clearInterval(intervalId);
+      // }, 1000);
+
+      // Math methods
+      console.log(Math.round(4.6));
+      console.log(Math.floor(4.7));
+      console.log(Math.ceil(4.2));
+      console.log(Math.random());
+      console.log(Math.floor(Math.random() * 10));
+      console.log(Math.floor(Math.random() * 10) + 1);
+
+      function divide(a, b) {
+        try {
+          console.log("Trying to divide", a, "by", b);
+          if (b === 0) {
+            throw new Error("Cannot divide by zero!");
+          }
+          let result = a / b;
+          console.log("Result:", result);
+        } catch (error) {
+          console.log("Caught an error:", error.message);
+        } finally {
+          console.log("Finally block executed. This runs no matter what.");
+        }
+      }
+
+      // Test the function
+      divide(10, 2); // No error
+      console.log("-----");
+      divide(10, 0); // Triggers error
+    </script>
+  </body>
+</html>

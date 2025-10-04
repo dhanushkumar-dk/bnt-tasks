@@ -1,0 +1,6 @@
+auto close tag
+auto rename tag
+code runner
+es7-react/redux
+live server
+prettier

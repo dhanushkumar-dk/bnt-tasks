@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML Entities - Student Guide</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        background-color: #f4f4f4;
+      }
+      h1,
+      h2 {
+        color: #2c3e50;
+      }
+      code {
+        background-color: #e8e8e8;
+        padding: 2px 5px;
+        border-radius: 4px;
+        font-size: 1.1em;
+      }
+      .example {
+        background: #fff;
+        border-left: 5px solid #3498db;
+        margin: 10px 0;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Understanding HTML Entities</h1>
+
+    <p>
+      HTML entities are used to display reserved characters in HTML. These
+      characters either have special meaning in HTML (like <code>&lt;</code> or
+      <code>&gt;</code>) or are invisible characters like spaces or symbols that
+      are not found on a keyboard.
+    </p>
+
+    <h2>Why use HTML Entities?</h2>
+    <ul>
+      <li>
+        To display reserved HTML characters (like <code>&lt;</code>,
+        <code>&gt;</code>, <code>&amp;</code>).
+      </li>
+      <li>To insert special symbols (like ©, ®, €, ₹).</li>
+      <li>To insert invisible characters like non-breaking space.</li>
+    </ul>
+
+    <h2>Common HTML Entities</h2>
+    <div class="example">
+      <strong>Less than &lt;</strong><br />
+      Code: <code>&amp;lt;</code><br />
+      Output: &lt;
+    </div>
+
+    <div class="example">
+      <strong>Greater than &gt;</strong><br />
+      Code: <code>&amp;gt;</code><br />
+      Output: &gt;
+    </div>
+
+    <div class="example">
+      <strong>Ampersand &amp;</strong><br />
+      Code: <code>&amp;amp;</code><br />
+      Output: &amp;
+    </div>
+
+    <div class="example">
+      <strong>Double Quote "</strong><br />
+      Code: <code>&amp;quot;</code><br />
+      Output: &quot;
+    </div>
+
+    <div class="example">
+      <strong>Non-Breaking Space</strong><br />
+      Code: <code>&amp;nbsp;</code><br />
+      Output: <code>This&nbsp;&nbsp;is&nbsp;&nbsp;spaced</code> →
+      This&nbsp;&nbsp;is&nbsp;&nbsp;spaced
+    </div>
+
+    <h2>Currency Symbols</h2>
+    <div class="example">
+      <strong>Rupee Symbol ₹</strong><br />
+      Code: <code>&amp;#8377;</code><br />
+      Output: ₹
+    </div>
+
+    <div class="example">
+      <strong>Euro Symbol €</strong><br />
+      Code: <code>&amp;euro;</code><br />
+      Output: &euro;
+    </div>
+
+    <div class="example">
+      <strong>Pound Symbol £</strong><br />
+      Code: <code>&amp;pound;</code><br />
+      Output: &pound;
+    </div>
+
+    <div class="example">
+      <strong>Copyright Symbol ©</strong><br />
+      Code: <code>&amp;copy;</code><br />
+      Output: &copy;
+    </div>
+
+    <div class="example">
+      <strong>Trademark Symbol ™</strong><br />
+      Code: <code>&amp;trade;</code><br />
+      Output: &trade;
+    </div>
+
+    <h2>Bonus: Using Numeric Codes</h2>
+    <p>Every entity also has a numeric version. For example:</p>
+    <div class="example">
+      <strong>Heart Symbol ♥</strong><br />
+      Code: <code>&amp;#9829;</code><br />
+      Output: &#9829;
+    </div>
+
+    <h2>Summary</h2>
+    <ul>
+      <li>
+        Entities begin with <code>&amp;</code> and end with <code>;</code>.
+      </li>
+      <li>
+        They are used to write characters that are otherwise interpreted by the
+        browser.
+      </li>
+      <li>They improve readability and ensure HTML behaves correctly.</li>
+    </ul>
+  </body>
+</html>

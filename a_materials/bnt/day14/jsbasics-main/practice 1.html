@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS String Methods</title>
+  </head>
+  <body>
+    <script>
+      // let arr = [1, 2, 3, 4, 5, 6];
+      let arr = [];
+      arr[0] = 1;
+      arr[1] = 2;
+      arr[2] = 3;
+      arr[3] = 4;
+      arr[4] = 5;
+      arr[5] = 6;
+
+      console.log("Length of arr: " + arr.length); // 6
+      console.log("Length after new element pushed: " + arr.push(10)); // Adds 10, returns new length 7
+      console.log("Length after element popped: " + arr.pop()); // Removes last element, returns 10
+      console.log(arr.shift()); // Removes first element, returns 1
+      console.log(arr.unshift(1)); // Adds 1 at start, returns new length
+      console.log(arr.indexOf(3)); // 2
+      console.log(arr.includes(4)); // true
+
+      // Iteration
+      arr.forEach((num) => console.log(num));
+
+      // Map, Filter, Reduce
+      let doubled = arr.map((x) => x * 2);
+      let evens = arr.filter((x) => x % 2 === 0);
+
+      console.log(doubled); // [2, 4, 6, 8, 10,12]
+      console.log(evens); // [2,4,6]
+
+      const studentData = {
+        studentId: "S12345",
+        name: "Rahul",
+        class: "10th Grade",
+        section: "A",
+        email: "rahul@example.com",
+        phone: "9876543210",
+        marks: 92,
+        attendance: "95%",
+      };
+
+      console.log(studentData.name);
+      console.log(studentData[name]);
+      console.log(studentData["section"]);
+
+      Object.keys(studentData).forEach((key) => {
+        console.log(`Field: ${key}, Value: ${studentData[key]}`);
+      });
+
+      console.log("Next Code ");
+      const school = [
+        {
+          class: "10th Grade",
+          section: "A",
+          students: [
+            {
+              name: "Rahul",
+              subjects: [
+                { name: "Math", marks: 95 },
+                { name: "Science", marks: 89 },
+              ],
+            },
+          ],
+        },
+      ];
+
+      school.forEach((classObj) => {
+        console.log(`Class: ${classObj.class}, Section: ${classObj.section}`);
+        classObj.students.forEach((student) => {
+          console.log(`Student: ${student.name}`);
+          student.subjects.forEach((subject) => {
+            console.log(`  Subject: ${subject.name}, Marks: ${subject.marks}`);
+          });
+        });
+      });
+
+      console.log("Next Code ");
+      const university = {
+        name: "National University",
+        location: "Chennai",
+        departments: {
+          science: {
+            head: "Dr. Ramesh",
+            courses: [
+              { name: "Physics", credits: 4 },
+              { name: "Chemistry", credits: 3 },
+            ],
+          },
+          commerce: {
+            head: "Ms. Kavya",
+            courses: [
+              { name: "Accounting", credits: 3 },
+              { name: "Economics", credits: 4 },
+            ],
+          },
+        },
+      };
+
+      console.log("University:", university.name);
+      console.log("Location:", university.location);
+
+      Object.keys(university.departments).forEach((deptKey) => {
+        const dept = university.departments[deptKey];
+        console.log(`Department: ${deptKey}, Head: ${dept.head}`);
+        dept.courses.forEach((course) => {
+          console.log(`Course: ${course.name}, Credits: ${course.credits}`);
+        });
+      });
+    </script>
+     
+  </body>
+</html>

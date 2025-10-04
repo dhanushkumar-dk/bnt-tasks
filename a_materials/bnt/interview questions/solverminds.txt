@@ -1,0 +1,237 @@
+
+public class StringTest {
+    public static void main(String[] args) {
+        String str1 = "text1";
+        String str2 = str1.concat("random text");
+
+        System.out.println(str2);
+    }
+}
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+public class StringTest {
+    public static void main(String[] args) {
+        String str = "abcdef";
+        System.out.println(str.reverse(1, 4));
+    }
+}
+
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+public class ThreadQuestion extends Thread {
+    public void run() {
+        System.out.println("Thread is running");
+    }
+
+    public static void main(String[] args) {
+        ThreadQuestion t = new ThreadQuestion();
+        t.run();   // Call 1
+        t.run();   // Call 2
+        t.start(); // Call 3
+    }
+}
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+public class ForEachExample {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        for (int num : numbers) {
+            num *= num;
+        }
+
+        System.out.println(numbers);
+    }
+}
+
+------------------------------------------------------------------------------
+
+
+import java.util.Arrays;
+
+public class ForEachExample {
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5};
+
+        for (int i = 0; i < numbers.length; i++) {
+            numbers[i] *= numbers[i]; // square the element
+        }
+
+        System.out.println(Arrays.toString(numbers));
+    }
+}
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+public class BitwiseInterview {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 7;
+
+        System.out.println("a & b = " + (a & b));
+        System.out.println("a | b = " + (a | b));
+        System.out.println("a ^ b = " + (a ^ b));
+    }
+}
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+class Animal {
+    void makeSound() {
+        System.out.println("Some generic animal sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Bark");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Meow");
+    }
+}
+
+public class TestPolymorphism {
+    public static void main(String[] args) {
+        Animal a1 = new Dog();
+        Animal a2 = new Cat();
+        Animal a3 = new Animal();
+
+        a1.makeSound();
+        a2.makeSound();
+        a3.makeSound();
+    }
+}
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+class Animal {
+    void makeSound() {
+        System.out.println("Some generic animal sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Bark");
+    }
+}
+
+public class TestPolymorphism {
+    public static void main(String[] args) {
+        Animal a;
+        a = new Dog();
+
+        a.makeSound();
+    }
+}
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+public class IncrementQuiz {
+    public static void main(String[] args) {
+
+        int a = 5;
+        
+        System.out.println(++a);
+        System.out.println(a++);
+
+    }
+}
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+pre and post increment inside the for loop
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+public class LoopQuiz {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 10;
+        int count = 0;
+
+        while (a > b) {
+            a += 2;
+            b -= 3;
+            count++;
+        }
+
+        System.out.println("count = " + count);
+
+    }
+}
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+1 qn for error handling
+
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+throw vs throws
+
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+
+
+
+
+
+
+------------------------------------------------------------------------------
+                            Some Previous Year Question
+
+        https://chatgpt.com/share/6875e8c4-2908-8009-ad55-d641026cc855
+------------------------------------------------------------------------------
+
+1. You have an 8-liter container and want to divide it into four equal parts 
+of 2 liters each.
+
+    However, you only have a 5-liter and 3-liter container for measurement.
+    How can you do it? Provide the approach and write the java code bases on 
+you approach.
+
+Hint: Use the 5-liter and 3-liter containers strategically to isolate 2 liters
+by transferring water step by step.
+
+
+------------------------------------------------------------------------------
+
+
+2. You are given a bag containing 12 identical-looking balls, one of which is 
+lighter than the others. You may use the scale only three times.
+
+How can you determine which ball is lighter using at most three weighings?
+
+Please describe your approach clearly and solve the problem using Java.
+
+
+
+------------------------------------------------------------------------------
+
+string concatination
+bitwise operators (and, or, xor ^)
+array with index
+accessing array using forEach and modifying values
+pre and post increment

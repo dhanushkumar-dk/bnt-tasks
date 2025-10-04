@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 50px;
+}
+
+.card {
+  height: 500px;
+  width: 200px;
+  padding: 50px 0px;
+  align-items: center;
+  background-color: rgb(212, 194, 194);
+  border: white;
+  text-align: center;
+}
+
+.card p {
+  margin: 10px 0px;
+}

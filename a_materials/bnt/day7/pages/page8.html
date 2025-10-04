@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display None vs Visibility Hidden</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: #4caf50;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+      }
+
+      .hidden-box {
+        visibility: hidden;
+      }
+
+      .none-box {
+        display: none;
+      }
+
+      .explanation {
+        background: #f9f9f9;
+        border-left: 5px solid #2196f3;
+        padding: 10px;
+        margin: 20px 0;
+      }
+
+      .code-block {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 5px;
+        font-family: monospace;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Difference Between <code>display: none</code> and
+      <code>visibility: hidden</code>
+    </h1>
+
+    <div class="explanation">
+      <h3>1. <code>display: none;</code></h3>
+      <p>
+        This property removes the element from the document layout. It will not
+        occupy any space on the page.
+      </p>
+    </div>
+
+    <div class="explanation">
+      <h3>2. <code>visibility: hidden;</code></h3>
+      <p>
+        This property hides the element, but the space it occupies will still be
+        visible (blank space remains).
+      </p>
+    </div>
+
+    <h2>Live Example:</h2>
+
+    <h3>Box with <code>display: none</code></h3>
+    <div class="box none-box">I am hidden (display: none)</div>
+    <div class="code-block">
+      &lt;div class="box none-box"&gt;...&lt;/div&gt;<br />
+      .none-box &#123; display: none; &#125;
+    </div>
+
+    <h3>Box with <code>visibility: hidden</code></h3>
+    <div class="box hidden-box">I am invisible (visibility: hidden)</div>
+    <div class="code-block">
+      &lt;div class="box hidden-box"&gt;...&lt;/div&gt;<br />
+      .hidden-box &#123; visibility: hidden; &#125;
+    </div>
+
+    <h3>Box with normal display (for comparison)</h3>
+    <div class="box">I am visible</div>
+
+    <h2>Summary Table:</h2>
+    <table border="1" cellpadding="10" cellspacing="0">
+      <tr>
+        <th>Property</th>
+        <th>Element Hidden?</th>
+        <th>Space Occupied?</th>
+      </tr>
+      <tr>
+        <td><code>display: none;</code></td>
+        <td>Yes</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td><code>visibility: hidden;</code></td>
+        <td>Yes</td>
+        <td>Yes</td>
+      </tr>
+    </table>
+
+    <h2>Use Cases:</h2>
+    <ul>
+      <li>
+        <strong>Use <code>display: none</code></strong> when you want to
+        completely remove the element from layout (e.g., hide a menu item).
+      </li>
+      <li>
+        <strong>Use <code>visibility: hidden</code></strong> when you want to
+        maintain the layout but hide the content (e.g., hiding something
+        temporarily).
+      </li>
+    </ul>
+  </body>
+</html>

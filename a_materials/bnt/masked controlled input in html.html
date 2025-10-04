@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aadhar Mask Input</title>
+</head>
+<body>
+
+<input type="text" id="aadharInput" placeholder="Enter 14-digit Aadhar" maxlength="14">
+<label>
+  <input type="checkbox" id="showFull"> Show full
+</label>
+
+<script>
+  const input = document.getElementById('aadharInput');
+  const checkbox = document.getElementById('showFull');
+
+  let fullValue = "";
+
+  input.addEventListener('input', function() {
+    fullValue = input.value;
+    if (!checkbox.checked) {
+      maskInput();
+    }
+  });
+
+  checkbox.addEventListener('change', function() {
+    if (checkbox.checked) {
+      input.value = fullValue;
+    } else {
+      maskInput();
+    }
+  });
+
+  function maskInput() {
+    if (fullValue.length <= 4) {
+      input.value = fullValue;
+    } else {
+      input.value = 'X'.repeat(fullValue.length - 4) + fullValue.slice(-4);
+    }
+  }
+</script>
+
+</body>
+</html>

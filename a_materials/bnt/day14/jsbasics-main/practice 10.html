@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <input type="text" id="name" />
+    <button onclick="getName()">Submit</button>
+
+    <script>
+      function getName() {
+        let name = $("#name").val(); // jQuery way
+        alert("Name is: " + name);
+      }
+    </script>
+    <br /><br /><br /><br />
+
+    <!-- AJAX (Asynchronous JavaScript and XML) is a technique to send/receive data without reloading the page. -->
+
+    <button id="btn">Click</button>
+    <br /><br /><br /><br />
+    <button id="btnOut">Move Out</button>
+    <br /><br /><br /><br />
+    <button id="btnDouble">Double Click</button>
+    <br /><br /><br /><br />
+    <input type="text" id="nameInput" placeholder="Enter name" />
+    <br /><br /><br /><br />
+    <select id="city">
+      <option>Select City</option>
+      <option>Chennai</option>
+      <option>Coimbatore</option>
+    </select>
+    <br /><br /><br /><br />
+    <input type="text" id="keyBox" placeholder="Type something" />
+    <br /><br /><br /><br />
+
+    <script>
+      $("#btn").click(function () {
+        alert("Button clicked");
+      });
+      $("#btn").mouseover(function () {
+        console.log("Mouse over the button");
+      });
+
+      $("#btnOut").mouseout(function () {
+        console.log("Mouse left the button");
+      });
+      $("#btnDouble").dblclick(function () {
+        alert("Button double clicked");
+      });
+      $("#nameInput").focus(function () {
+        console.log("Input field focused");
+      });
+      $("#nameInput").blur(function () {
+        console.log("Input field lost focus");
+      });
+      $("#city").change(function () {
+        alert("You selected: " + $(this).val());
+      });
+      $("#keyBox").keydown(function (event) {
+        console.log("Key pressed: " + event.key);
+      });
+    </script>
+  </body>
+</html>

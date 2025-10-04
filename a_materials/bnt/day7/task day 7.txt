@@ -1,0 +1,28 @@
+html 5 
+
+strong bold
+
+normal button vs button in input type
+
+meta tag
+
+media query
+
+html canvas
+
+iframe 5 ex pages
+
+display none vs visibility disabled
+
+html entities
+
+html 5, 2 apis using canvas
+
+
+
+
+
+
+
+
+

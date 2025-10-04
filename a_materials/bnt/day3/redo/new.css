@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrolling the entire body */
+}
+
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 70px); /* Adjust based on header height */
+}
+
+.sidebar {
+  background-color: #f4f4f4;
+  width: 250px;
+  padding: 1rem;
+  flex-shrink: 0;
+  position: sticky;
+  top: 70px; /* Same as header height to avoid overlap */
+  height: calc(100vh - 70px);
+  overflow: hidden; /* Keep sidebar non-scrollable */
+}
+
+.content {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto; /* Only content scrolls */
+  height: calc(100vh - 70px);
+}

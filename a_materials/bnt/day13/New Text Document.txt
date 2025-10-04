@@ -1,0 +1,125 @@
+if condition
+
+
+false, 0, undefined, nan, ""
+
+
+true, 1, hello, [], {}, "0", -1
+
+-------------------------------------------------------------------------------------
+
+
+onclick
+
+onmouseover
+
+onkeydown
+
+change
+
+blur
+dblclick
+
+showSize
+reloadPage
+openTab
+
+
+location.reload
+
+location.href
+
+setDelay setTimeOut(()=>{},2000); setInterval(()=>{},3000);
+
+scrollTo(0,0);
+
+-------------------------------------------------------------------------------------
+
+
+(e) => (e.preventDefault())
+
+-------------------------------------------------------------------------------------
+
+array
+
+
+length
+push
+pop
+shift
+unshift
+indexOf
+includes
+
+
+arr.forEach((num) => console.log(num));
+
+forin forof
+-------------------------------------------------------------------------------------
+
+lambda functions
+
+-------------------------------------------------------------------------------------
+map, filter, reduce
+
+let doubled = arr.map((x) = x*2)
+let evens = arr.filter((x) => x%2 === 0);
+
+console.log(doubled);
+console.log(evens);
+
+
+Object.keys(studentData).forEach((key) => {
+	console.log(`Field: ${key}, Value: ${studentData[value]}`)
+}
+-------------------------------------------------------------------------------------
+
+object
+
+-------------------------------------------------------------------------------------
+
+json
+
+-------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1 2 3 4 6
+
+Task
+
+
+1. typeof []str, num, char
+
+2. str + num
+
+3. charAt
+
+4. .lastIndexOf arr, str, anything else
+
+5. type casting [init in str "1, 2, 3, 4" to Number]
+
+6. cre str convert to numof to produce Nan
+
+7. isInteger {check with float, others}
+
+8. parseInt, parseFloat
+
+9. to fixed (rounding off after decimal points)
+
+10. switch sam example default must
+
+11. scope checking var, let, const. print value inside and outside scope
+
+12. shift, push, pop, unshift, delete
+
+13. splice
+
+14. merge 2 arr using concat
+
+15. ... spread operator
+
+16. object ulla arr kulla iruka values ah access pannanum
+
+17. obj.create

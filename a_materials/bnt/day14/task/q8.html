@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jQuery All Events Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      button,
+      input,
+      textarea {
+        margin: 10px 0;
+        padding: 8px;
+        font-size: 16px;
+      }
+      #output {
+        margin-top: 20px;
+        padding: 10px;
+        border: 2px solid #333;
+        min-height: 30px;
+        font-weight: bold;
+        color: #0055aa;
+      }
+      #scrollable {
+        width: 300px;
+        height: 100px;
+        overflow-y: scroll;
+        border: 1px solid #ccc;
+        margin-top: 10px;
+      }
+      #scrollable p {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>jQuery Event Handling: Multiple Events Demo</h2>
+
+    <button id="btnClick">Click me</button>
+    <button id="btnDblClick">Double-click me</button>
+
+    <input type="text" id="inputFocusBlur" placeholder="Focus and blur here" />
+    <br />
+    <select id="selectChange">
+      <option value="">Select an option</option>
+      <option value="Option 1">Option 1</option>
+      <option value="Option 2">Option 2</option>
+    </select>
+    <br />
+    <form id="formSubmit">
+      <input type="text" placeholder="Type something" required />
+      <button type="submit">Submit Form</button>
+    </form>
+
+    <div id="scrollable">
+      <p>Scroll inside this box to trigger scroll event.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p>Suspendisse pulvinar, quam at placerat tempor.</p>
+      <p>More content to enable scrolling.</p>
+      <p>Even more content to enable scrolling.</p>
+    </div>
+
+    <div id="output">Event output will appear here.</div>
+
+    <script>
+      $(document).ready(function () {
+        // Click event
+        $("#btnClick").on("click", function () {
+          $("#output").text("Button clicked!");
+        });
+
+        // Double-click event
+        $("#btnDblClick").on("dblclick", function () {
+          $("#output").text("Button double-clicked!");
+        });
+
+        // Mouse enter and leave
+        $("#btnClick")
+          .on("mouseenter", function () {
+            $("#output").text("Mouse entered button.");
+          })
+          .on("mouseleave", function () {
+            $("#output").text("Mouse left button.");
+          });
+
+        // Focus and blur on input
+        $("#inputFocusBlur")
+          .on("focus", function () {
+            $("#output").text("Input focused.");
+          })
+          .on("blur", function () {
+            $("#output").text("Input lost focus (blur).");
+          });
+
+        // Change event on select
+        $("#selectChange").on("change", function () {
+          $("#output").text("Select changed to: " + $(this).val());
+        });
+
+        // Submit event on form
+        $("#formSubmit").on("submit", function (e) {
+          e.preventDefault();
+          $("#output").text("Form submitted!");
+        });
+
+        // Keydown and keyup on input inside form
+        $('#formSubmit input[type="text"]')
+          .on("keydown", function (e) {
+            $("#output").text("Key down: " + e.key);
+          })
+          .on("keyup", function (e) {
+            $("#output").text("Key up: " + e.key);
+          });
+
+        // Scroll event inside the div with overflow
+        $("#scrollable").on("scroll", function () {
+          $("#output").text("Scrolling inside the box.");
+        });
+
+        // Window resize event
+        $(window).on("resize", function () {
+          $("#output").text(
+            "Window resized to: " + $(window).width() + "x" + $(window).height()
+          );
+        });
+      });
+    </script>
+  </body>
+</html>

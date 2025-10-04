@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required Meta Tags -->
+    <meta charset="UTF-8" />
+    <!-- Ensures browser can correctly read special characters like €, ₹, ä, ñ, emojis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes your website mobile-friendly and responsive -->
+
+    <!-- SEO Related -->
+    <meta
+      name="description"
+      content="A complete guide to HTML meta tags with examples, explanations, and SEO impact."
+    />
+    <!-- This is shown in search engine results -->
+    <meta
+      name="keywords"
+      content="HTML, meta tag, SEO, charset, viewport, web development, Open Graph, social share"
+    />
+    <!-- Not used much today by Google, but still good practice -->
+    <meta name="author" content="Dhanush Kumar" />
+    <!-- Indicates the content creator -->
+
+    <!-- Social Media Integration - Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta
+      property="og:title"
+      content="Master HTML Meta Tags with Real Examples"
+    />
+    <!-- The title shown when someone shares your link -->
+    <meta
+      property="og:description"
+      content="Understand all HTML meta tags with powerful examples for SEO, social media, mobile, and browsers."
+    />
+    <!-- Description shown in shared preview -->
+    <meta property="og:type" content="website" />
+    <!-- Tells it's a website -->
+    <meta
+      property="og:image"
+      content="https://example.com/images/meta-guide.png"
+    />
+    <!-- Preview image -->
+    <meta property="og:url" content="https://example.com/meta-tags" />
+    <!-- The URL to share -->
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Summary with large image -->
+    <meta name="twitter:title" content="Ultimate Meta Tag HTML Guide" />
+    <!-- Twitter share title -->
+    <meta
+      name="twitter:description"
+      content="A complete walkthrough of HTML meta tags with practical examples."
+    />
+    <meta
+      name="twitter:image"
+      content="https://example.com/images/twitter-preview.png"
+    />
+
+    <!-- Browser Behavior -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Makes sure IE uses the latest rendering engine -->
+    <meta http-equiv="refresh" content="60" />
+    <!-- Refreshes the page every 60 seconds (for dashboards or news tickers) -->
+
+    <!-- Search Engine Crawling Instructions -->
+    <meta name="robots" content="index, follow" />
+    <!-- Allow indexing and link following -->
+    <!-- other examples: noindex, nofollow -->
+
+    <!-- Mobile Browser Styling -->
+    <meta name="theme-color" content="#0f172a" />
+    <!-- Sets the mobile browser color (Chrome, Firefox mobile) -->
+
+    <title>Full Explanation of HTML Meta Tags</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+      h1,
+      h2 {
+        color: #0077b6;
+      }
+      pre {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-left: 5px solid #00b4d8;
+      }
+      code {
+        background: #e0f7fa;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+      ul {
+        padding-left: 18px;
+      }
+      li {
+        margin-bottom: 6px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📘 Complete Guide to HTML <code>&lt;meta&gt;</code> Tags</h1>
+
+    <p>
+      The <code>&lt;meta&gt;</code> tag is one of the most powerful and
+      underappreciated tags in HTML. It does not display on the page, but
+      browsers, search engines, social media, and devices use it heavily to
+      interpret and optimize your site.
+    </p>
+
+    <h2>1. <code>&lt;meta charset="UTF-8"&gt;</code></h2>
+    <p>
+      <strong>Purpose:</strong> Defines the character encoding. UTF-8 supports
+      almost every character from all human languages, including Tamil, emojis,
+      symbols, etc.
+    </p>
+    <p>
+      <strong>Example:</strong> Without UTF-8, ₹ symbol may render as "?" or
+      junk.
+    </p>
+
+    <pre><code>&lt;meta charset="UTF-8"&gt;</code></pre>
+
+    <h2>2. <code>&lt;meta name="viewport"&gt;</code></h2>
+    <p>
+      <strong>Purpose:</strong> Helps mobile browsers scale the layout properly.
+      Without this, your site looks zoomed out on phones.
+    </p>
+
+    <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+
+    <p><strong>Breakdown:</strong></p>
+    <ul>
+      <li><code>width=device-width</code> – Matches screen width</li>
+      <li><code>initial-scale=1.0</code> – Default zoom level (100%)</li>
+    </ul>
+
+    <h2>3. <code>&lt;meta name="description"&gt;</code></h2>
+    <p>
+      <strong>Purpose:</strong> Displayed in search engine results below the
+      title.
+    </p>
+    <p>
+      <strong>SEO Tip:</strong> Keep it between 140–160 characters for best
+      Google preview.
+    </p>
+
+    <pre><code>&lt;meta name="description" content="Learn HTML meta tags with full explanation and real-world use cases."&gt;</code></pre>
+
+    <h2>4. <code>&lt;meta name="keywords"&gt;</code></h2>
+    <p>
+      <strong>Purpose:</strong> List of keywords for SEO (mostly deprecated but
+      okay to include).
+    </p>
+
+    <pre><code>&lt;meta name="keywords" content="HTML, SEO, meta tag, responsive, Open Graph"&gt;</code></pre>
+
+    <h2>5. <code>&lt;meta name="author"&gt;</code></h2>
+    <p>
+      <strong>Purpose:</strong> States the author of the document. Used in
+      browser extensions, RSS readers, documentation generators, etc.
+    </p>
+
+    <pre><code>&lt;meta name="author" content="Dhanush Kumar"&gt;</code></pre>
+
+    <h2>6. <code>&lt;meta name="robots"&gt;</code></h2>
+    <p>
+      <strong>Purpose:</strong> Tells search engines whether to index the page
+      or not.
+    </p>
+    <pre><code>&lt;meta name="robots" content="index, follow"&gt;</code></pre>
+    <p><strong>Other examples:</strong></p>
+    <ul>
+      <li>
+        <code>noindex, nofollow</code> – Don’t show in search or follow links
+      </li>
+      <li><code>index, nofollow</code> – Show page but don’t follow links</li>
+    </ul>
+
+    <h2>7. <code>&lt;meta http-equiv="refresh"&gt;</code></h2>
+    <p>
+      <strong>Purpose:</strong> Auto-refresh or redirect a page after a time
+      interval.
+    </p>
+    <pre><code>&lt;meta http-equiv="refresh" content="10; url=https://example.com/login"&gt;</code></pre>
+    <p>
+      <strong>Use case:</strong> After logout, redirect user to login page after
+      10s.
+    </p>
+
+    <h2>8. <code>&lt;meta http-equiv="X-UA-Compatible"&gt;</code></h2>
+    <p>
+      <strong>Purpose:</strong> Forces Internet Explorer to use the latest
+      rendering engine.
+    </p>
+
+    <pre><code>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</code></pre>
+
+    <h2>9. Social Media: Open Graph Tags</h2>
+    <p>
+      <strong>Purpose:</strong> Enhances how your page looks when shared on
+      Facebook, LinkedIn, WhatsApp.
+    </p>
+    <pre><code>&lt;meta property="og:title" content="HTML Meta Tag Guide"&gt;
+&lt;meta property="og:description" content="Full meta tag tutorial"&gt;
+&lt;meta property="og:image" content="https://example.com/image.jpg"&gt;
+&lt;meta property="og:url" content="https://example.com/meta"&gt;</code></pre>
+
+    <h2>10. Social Media: Twitter Card Tags</h2>
+    <p><strong>Purpose:</strong> Same as above but for Twitter.</p>
+    <pre><code>&lt;meta name="twitter:card" content="summary_large_image"&gt;
+&lt;meta name="twitter:title" content="Meta Tag Full Guide"&gt;
+&lt;meta name="twitter:description" content="All HTML meta tags explained with examples"&gt;
+&lt;meta name="twitter:image" content="https://example.com/meta.jpg"&gt;</code></pre>
+
+    <h2>11. <code>&lt;meta name="theme-color"&gt;</code></h2>
+    <p><strong>Purpose:</strong> Sets browser color bar in mobile devices.</p>
+    <pre><code>&lt;meta name="theme-color" content="#0f172a"&gt;</code></pre>
+
+    <h2>🧠 Summary Table</h2>
+    <table
+      border="1"
+      cellpadding="6"
+      style="border-collapse: collapse; background: #fff"
+    >
+      <tr>
+        <th>Meta Tag</th>
+        <th>Purpose</th>
+        <th>Used By</th>
+      </tr>
+      <tr>
+        <td><code>charset</code></td>
+        <td>Character encoding</td>
+        <td>Browser</td>
+      </tr>
+      <tr>
+        <td><code>viewport</code></td>
+        <td>Responsive layout</td>
+        <td>Mobile browsers</td>
+      </tr>
+      <tr>
+        <td><code>description</code></td>
+        <td>SEO summary</td>
+        <td>Search engines</td>
+      </tr>
+      <tr>
+        <td><code>robots</code></td>
+        <td>Search index control</td>
+        <td>Search engines</td>
+      </tr>
+      <tr>
+        <td><code>theme-color</code></td>
+        <td>Browser UI color</td>
+        <td>Mobile browsers</td>
+      </tr>
+      <tr>
+        <td><code>og:title</code></td>
+        <td>Social media preview title</td>
+        <td>Facebook, LinkedIn</td>
+      </tr>
+      <tr>
+        <td><code>twitter:title</code></td>
+        <td>Twitter preview title</td>
+        <td>Twitter</td>
+      </tr>
+    </table>
+
+    <h2>🧾 Conclusion</h2>
+    <p>
+      The <code>&lt;meta&gt;</code> tag may be invisible on the frontend, but it
+      powers search engine indexing, mobile layouts, browser behavior, and even
+      how links look on social media. Mastering it is essential for every web
+      developer!
+    </p>
+  </body>
+</html>

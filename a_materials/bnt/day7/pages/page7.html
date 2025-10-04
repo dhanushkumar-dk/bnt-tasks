@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning HTML5 &lt;iframe&gt; Tag with 5 Examples</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        background-color: #f4f9ff;
+        color: #333;
+      }
+
+      h1 {
+        color: #1e3a8a;
+      }
+
+      h2 {
+        color: #2563eb;
+      }
+
+      code {
+        background-color: #e2e8f0;
+        padding: 2px 6px;
+        border-radius: 5px;
+        font-family: Consolas, monospace;
+      }
+
+      pre {
+        background-color: #e2e8f0;
+        padding: 12px;
+        border-radius: 6px;
+        overflow-x: auto;
+      }
+
+      iframe {
+        border: 2px solid #333;
+        margin: 10px 0;
+        display: block;
+      }
+
+      .example-section {
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>&lt;iframe&gt; Tag in HTML5 - Explained with 5 Examples</h1>
+
+    <p>
+      The <code>&lt;iframe&gt;</code> element allows you to embed another web
+      page or content such as videos, maps, and documents inside your HTML
+      document.
+    </p>
+
+    <h2>Basic Syntax:</h2>
+    <pre><code>&lt;iframe src="URL" width="WIDTH" height="HEIGHT"&gt;&lt;/iframe&gt;</code></pre>
+
+    <h2>Common Attributes:</h2>
+    <ul>
+      <li><code>src</code>: URL of the page to embed</li>
+      <li><code>width</code> and <code>height</code>: Size of the iframe</li>
+      <li><code>title</code>: Describes the iframe content</li>
+      <li>
+        <code>allowfullscreen</code>: Allows fullscreen display (for videos)
+      </li>
+      <li><code>loading="lazy"</code>: Delays loading for performance</li>
+      <li><code>sandbox</code>: Provides security restrictions</li>
+    </ul>
+
+    <!-- Example 1 -->
+    <div class="example-section">
+      <h2>Example 1: YouTube Video</h2>
+      <pre><code>&lt;iframe 
+  src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+  width="560" height="315" 
+  allowfullscreen&gt;&lt;/iframe&gt;</code></pre>
+      <iframe
+        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+        width="560"
+        height="315"
+        title="YouTube video"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
+
+    <!-- Example 2 -->
+    <div class="example-section">
+      <h2>Example 2: Google Maps</h2>
+      <pre><code>&lt;iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!..." 
+  width="600" height="450" 
+  style="border:0;" 
+  allowfullscreen loading="lazy"&gt;&lt;/iframe&gt;</code></pre>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.451221616776!2d-77.04279358465594!3d-12.0463739468539!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8c68f7d67d3%3A0xf343d48e88c11b42!2sPlaza%20Mayor%20de%20Lima!5e0!3m2!1sen!2sus!4v1619200168123!5m2!1sen!2sus"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      >
+      </iframe>
+    </div>
+
+    <!-- Example 3 -->
+    <div class="example-section">
+      <h2>Example 3: Embedding an External Website (Example.com)</h2>
+      <pre><code>&lt;iframe 
+  src="https://example.com" 
+  width="100%" height="300" 
+  title="Example Website"&gt;&lt;/iframe&gt;</code></pre>
+      <iframe
+        src="https://example.com"
+        width="100%"
+        height="300"
+        title="Example Website"
+      >
+      </iframe>
+    </div>
+
+    <!-- Example 4 (Modified) -->
+    <div class="example-section">
+      <h2>Example 4: Embedding a Wikipedia Page</h2>
+      <pre><code>&lt;iframe 
+  src="https://en.wikipedia.org/wiki/HTML" 
+  width="100%" height="400" 
+  title="Wikipedia - HTML"&gt;&lt;/iframe&gt;</code></pre>
+      <iframe
+        src="https://en.wikipedia.org/wiki/HTML"
+        width="100%"
+        height="400"
+        title="Wikipedia - HTML"
+      >
+      </iframe>
+    </div>
+
+    <!-- Example 5 -->
+    <div class="example-section">
+      <h2>Example 5: CodePen Embedded Project</h2>
+      <pre><code>&lt;iframe 
+  height="300" 
+  style="width: 100%;" 
+  scrolling="no" 
+  title="Simple Button" 
+  src="https://codepen.io/team/codepen/embed/preview/PNaGbb" 
+  frameborder="no" 
+  loading="lazy" 
+  allowtransparency="true" 
+  allowfullscreen="true"&gt;&lt;/iframe&gt;</code></pre>
+      <iframe
+        height="300"
+        style="width: 100%"
+        scrolling="no"
+        title="Simple Button"
+        src="https://codepen.io/team/codepen/embed/preview/PNaGbb"
+        frameborder="no"
+        loading="lazy"
+        allowtransparency="true"
+        allowfullscreen="true"
+      >
+      </iframe>
+    </div>
+
+    <h2>⚠️ Security Tip:</h2>
+    <p>
+      Always be careful when embedding untrusted sources. Use the
+      <code>sandbox</code> attribute to limit capabilities of the iframe:
+    </p>
+    <pre><code>&lt;iframe src="..." sandbox&gt;&lt;/iframe&gt;</code></pre>
+  </body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 APIs - Geolocation & Drag and Drop</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f4f4;
+        line-height: 1.6;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #2c3e50;
+      }
+
+      button {
+        padding: 10px 15px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #2980b9;
+      }
+
+      .output {
+        margin-top: 15px;
+        padding: 10px;
+        background: #fff;
+        border: 1px solid #ccc;
+        max-width: 500px;
+      }
+
+      .draggable {
+        width: 100px;
+        height: 100px;
+        background-color: #e74c3c;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: grab;
+        margin-top: 20px;
+      }
+
+      .dropzone {
+        width: 200px;
+        height: 200px;
+        border: 3px dashed #34495e;
+        background-color: #ecf0f1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #2c3e50;
+        margin-top: 20px;
+      }
+
+      pre {
+        background-color: #272822;
+        color: #f8f8f2;
+        padding: 15px;
+        border-radius: 5px;
+        overflow-x: auto;
+        font-size: 14px;
+      }
+
+      code {
+        font-family: Consolas, monospace;
+      }
+
+      .note {
+        background: #fff3cd;
+        padding: 10px;
+        border-left: 4px solid #ffc107;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML5 APIs – Geolocation & Drag and Drop</h1>
+    <p>
+      This page helps you understand two powerful HTML5 APIs with examples, code
+      snippets, and explanations.
+    </p>
+
+    <hr />
+
+    <!-- 1. GEOLOCATION API -->
+    <h2>1. Geolocation API</h2>
+    <p>
+      📍 The <strong>Geolocation API</strong> lets a website access the user's
+      current location (latitude & longitude). Commonly used in maps, weather
+      apps, and delivery tracking.
+    </p>
+
+    <h3>Code Snippet:</h3>
+    <pre><code>if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition((position) => {
+    const lat = position.coords.latitude;
+    const long = position.coords.longitude;
+    console.log(lat, long);
+  }, () => {
+    console.log("Unable to retrieve location.");
+  });
+} else {
+  console.log("Geolocation is not supported.");
+}</code></pre>
+
+    <h3>Explanation:</h3>
+    <ul>
+      <li>
+        <code>navigator.geolocation</code> – Checks if geolocation is supported.
+      </li>
+      <li>
+        <code>getCurrentPosition()</code> – Asks the user for permission and
+        gets the location.
+      </li>
+      <li>
+        <code>position.coords.latitude / longitude</code> – Gives you the exact
+        coordinates.
+      </li>
+      <li>
+        <code>callback functions</code> – First is success, second is error
+        handler.
+      </li>
+    </ul>
+
+    <h3>Live Example:</h3>
+    <button onclick="getLocation()">Get My Location</button>
+    <div class="output" id="locationOutput"></div>
+
+    <script>
+      function getLocation() {
+        const output = document.getElementById("locationOutput");
+
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(
+            (position) => {
+              const lat = position.coords.latitude;
+              const long = position.coords.longitude;
+              output.innerHTML = `📍 Latitude: ${lat}<br>📍 Longitude: ${long}`;
+            },
+            () => {
+              output.innerHTML = "❌ Unable to retrieve your location.";
+            }
+          );
+        } else {
+          output.innerHTML = "❌ Geolocation is not supported by your browser.";
+        }
+      }
+    </script>
+
+    <hr />
+
+    <!-- 2. DRAG AND DROP API -->
+    <h2>2. Drag and Drop API</h2>
+    <p>
+      🧲 The <strong>Drag and Drop API</strong> allows users to drag elements
+      and drop them into designated drop zones. Useful in games, file uploads,
+      sorting apps, etc.
+    </p>
+
+    <h3>Code Snippet:</h3>
+    <pre><code>// Step 1: Start dragging
+dragItem.addEventListener("dragstart", (e) => {
+  e.dataTransfer.setData("text/plain", "dropped");
+});
+
+// Step 2: Allow drop
+dropZone.addEventListener("dragover", (e) => {
+  e.preventDefault(); // Needed to allow drop
+});
+
+// Step 3: Handle drop
+dropZone.addEventListener("drop", (e) => {
+  e.preventDefault();
+  dropZone.innerHTML = "✅ Dropped Successfully!";
+});</code></pre>
+
+    <h3>Explanation:</h3>
+    <ul>
+      <li><code>draggable="true"</code> – Makes the element draggable.</li>
+      <li>
+        <code>dragstart</code> – Triggered when dragging starts. You can attach
+        data to the drag.
+      </li>
+      <li>
+        <code>dragover</code> – Required to allow dropping by calling
+        <code>preventDefault()</code>.
+      </li>
+      <li>
+        <code>drop</code> – Handles what happens when the draggable item is
+        dropped.
+      </li>
+    </ul>
+
+    <h3>Live Example:</h3>
+    <div class="draggable" draggable="true" id="dragItem">Drag me</div>
+    <div class="dropzone" id="dropZone">Drop Here</div>
+
+    <script>
+      const dragItem = document.getElementById("dragItem");
+      const dropZone = document.getElementById("dropZone");
+
+      dragItem.addEventListener("dragstart", (e) => {
+        e.dataTransfer.setData("text/plain", "dropped");
+      });
+
+      dropZone.addEventListener("dragover", (e) => {
+        e.preventDefault(); // Allow dropping
+        dropZone.style.backgroundColor = "#d1f7c4";
+      });
+
+      dropZone.addEventListener("dragleave", () => {
+        dropZone.style.backgroundColor = "#ecf0f1";
+      });
+
+      dropZone.addEventListener("drop", (e) => {
+        e.preventDefault();
+        dropZone.innerHTML = "✅ Dropped Successfully!";
+        dropZone.style.backgroundColor = "#2ecc71";
+      });
+    </script>
+
+    <hr />
+
+    <h2>📝 Summary</h2>
+    <ul>
+      <li>
+        <strong>Geolocation API:</strong> Detects current latitude and
+        longitude.
+      </li>
+      <li>
+        <strong>Drag and Drop API:</strong> Lets you drag elements into drop
+        zones using events.
+      </li>
+    </ul>
+
+    <div class="note">
+      ✅ These APIs work directly in the browser without any external libraries.
+      Useful in real-world web apps.
+    </div>
+  </body>
+</html>

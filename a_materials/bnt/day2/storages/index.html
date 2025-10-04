@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Session Storage Example</title>
+    <script>
+      // Function to save data into sessionStorage
+      function saveToSession() {
+        const userInput = document.getElementById("username").value.trim();
+        if (userInput) {
+          sessionStorage.setItem("username", userInput);
+          alert("Username saved in session storage!");
+        } else {
+          alert("Enter valid username");
+        }
+      }
+
+      // Function to load data from sessionStorage
+      function loadFromSession() {
+        const savedUsername = sessionStorage.getItem("username");
+        if (savedUsername) {
+          document.getElementById("display").textContent =
+            "Welcome back, " + savedUsername + "!";
+        } else {
+          document.getElementById("display").textContent =
+            "No session data found.";
+        }
+      }
+
+      // Automatically load session data when the page is loaded
+      window.onload = function () {
+        loadFromSession();
+      };
+    </script>
+  </head>
+  <body>
+    <h2>Session Storage Demo</h2>
+    <label for="username">Enter your name:</label>
+    <input type="text" id="username" />
+    <button onclick="saveToSession()">Save</button>
+
+    <h3 id="display">No session data yet.</h3>
+  </body>
+</html>

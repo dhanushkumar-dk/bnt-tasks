@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  gap: 10px;
+}
+.top {
+  padding: 20px;
+}
+
+.top u {
+  color: rgba(255, 0, 0, 0.694);
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card {
+  border: solid 1px rgba(0, 0, 0, 0.422);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  /* box-shadow: ; */
+}
+
+.pricing {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  padding: 10px;
+}
+
+.pricing h1 {
+  color: rgba(255, 0, 0, 0.694);
+}
+
+.hungry1 {
+  color: white;
+  display: flex;
+  padding: 10px;
+  position: relative;
+  border: solid 1px black;
+  border-radius: 50px;
+  background-color: rgba(255, 0, 0, 0.694);
+  z-index: 1;
+  bottom: -30px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+hr {
+  border: none;
+  margin: 10px;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.382);
+  width: 80%;
+}

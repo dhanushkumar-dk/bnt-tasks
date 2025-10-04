@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Tutorial for Students</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f5f5f5;
+        color: #333;
+        padding: 20px;
+      }
+      header {
+        text-align: center;
+        padding: 20px;
+        background: #0077cc;
+        color: white;
+        border-radius: 10px;
+      }
+      section {
+        background: white;
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px #ccc;
+      }
+      h2 {
+        color: #0077cc;
+      }
+      code {
+        background-color: #eee;
+        padding: 3px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+      pre {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Understanding HTML5</h1>
+      <p>A Simple Guide for Students</p>
+    </header>
+
+    <section>
+      <h2>What is HTML5?</h2>
+      <p>
+        HTML5 is the latest version of HyperText Markup Language, the standard
+        language for creating web pages. It brings new elements, APIs, and
+        capabilities to build modern, responsive, and interactive websites.
+      </p>
+    </section>
+
+    <section>
+      <h2>New Features in HTML5</h2>
+      <ul>
+        <li>
+          <strong>Semantic Tags:</strong> <code>&lt;header&gt;</code>,
+          <code>&lt;footer&gt;</code>, <code>&lt;section&gt;</code>,
+          <code>&lt;article&gt;</code>, etc., for better structure.
+        </li>
+        <li>
+          <strong>Multimedia:</strong> Direct support for
+          <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code> tags.
+        </li>
+        <li>
+          <strong>Form Enhancements:</strong> New input types like
+          <code>email</code>, <code>date</code>, <code>range</code>.
+        </li>
+        <li><strong>Canvas:</strong> For drawing graphics via JavaScript.</li>
+        <li><strong>Geolocation API:</strong> Access user’s location.</li>
+        <li>
+          <strong>Local Storage:</strong> Store data on browser without cookies.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Semantic Elements</h2>
+      <p>HTML5 introduced semantic tags to better describe the content:</p>
+      <ul>
+        <li><code>&lt;header&gt;</code> – Introductory content</li>
+        <li><code>&lt;nav&gt;</code> – Navigation links</li>
+        <li><code>&lt;section&gt;</code> – Thematic grouping of content</li>
+        <li>
+          <code>&lt;article&gt;</code> – Independent, self-contained content
+        </li>
+        <li><code>&lt;footer&gt;</code> – Footer of the page or section</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>HTML5 Audio and Video</h2>
+      <p>HTML5 allows embedding multimedia without plugins:</p>
+      <h4>Example: Audio</h4>
+      <pre><code>&lt;audio controls&gt;
+  &lt;source src="song.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;
+</code></pre>
+      <h4>Example: Video</h4>
+      <pre><code>&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;
+</code></pre>
+    </section>
+
+    <section>
+      <h2>HTML5 Canvas API</h2>
+      <p>
+        The <code>&lt;canvas&gt;</code> tag is used to draw graphics using
+        JavaScript.
+      </p>
+      <pre><code>&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;
+
+&lt;script&gt;
+  const canvas = document.getElementById("myCanvas");
+  const ctx = canvas.getContext("2d");
+  ctx.fillStyle = "blue";
+  ctx.fillRect(20, 20, 150, 50);
+&lt;/script&gt;
+</code></pre>
+    </section>
+
+    <section>
+      <h2>HTML5 APIs (Examples)</h2>
+      <ul>
+        <li>
+          <strong>Geolocation API:</strong> Access user’s current location.
+        </li>
+        <li>
+          <strong>LocalStorage API:</strong> Store data locally in key-value
+          format.
+        </li>
+      </ul>
+
+      <h4>Example: Geolocation</h4>
+      <pre><code>navigator.geolocation.getCurrentPosition(function(position) {
+  alert("Latitude: " + position.coords.latitude);
+});</code></pre>
+
+      <h4>Example: LocalStorage</h4>
+      <pre><code>localStorage.setItem("username", "student");
+let user = localStorage.getItem("username");</code></pre>
+    </section>
+
+    <section>
+      <h2>HTML5 Form Input Types</h2>
+      <p>
+        HTML5 introduced new input types that improve user experience and
+        validation.
+      </p>
+      <ul>
+        <li>
+          <code>&lt;input type="email"&gt;</code> – Validates email format
+        </li>
+        <li><code>&lt;input type="date"&gt;</code> – Date picker</li>
+        <li><code>&lt;input type="range"&gt;</code> – Slider control</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Advantages of HTML5</h2>
+      <ul>
+        <li>No need for Flash or external plugins</li>
+        <li>Better accessibility with semantic tags</li>
+        <li>Faster page load and cleaner code</li>
+        <li>Mobile-friendly and responsive</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>
+        HTML5 is powerful, flexible, and essential for modern web development.
+        Mastering it helps you build structured, accessible, and interactive
+        websites easily.
+      </p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,166 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+  </head>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #bd8888;
+    }
+
+    .container-inside {
+      padding: 20px;
+      background-color: rgb(233, 254, 255);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    #submit {
+      padding: 5px 10px;
+    }
+
+    #submit:hover {
+      background-color: #fff;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="container-inside">
+        <h2 style="text-align: center; padding: 10px">Login Form</h2>
+
+        <form action="">
+          <div>
+            <label for="username">Username</label>
+            <input type="email" name="username" id="username" required />
+          </div>
+
+          <div>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required />
+          </div>
+
+          <input type="submit" value="Login" id="submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Types Demo</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+      input,
+      button,
+      select {
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Input Types Demo</h1>
+
+    <form action="#" method="post" autocomplete="on">
+      <!-- Basic Inputs -->
+      <label>Text: <input type="text" name="text" /></label>
+      <label>Email: <input type="email" name="email" /></label>
+      <label>Password: <input type="password" name="password" /></label>
+      <label>Phone: <input type="tel" name="phone" /></label>
+      <label>Search: <input type="search" name="search" /></label>
+      <label>URL: <input type="url" name="url" /></label>
+
+      <!-- Numbers and Range -->
+      <label
+        >Number (min:1, max:10, step:1):
+        <input type="number" name="number" min="1" max="10" step="1" value="5"
+      /></label>
+      <label
+        >Range (0-100): <input type="range" name="range" min="0" max="100"
+      /></label>
+
+      <!-- Dates -->
+      <label
+        >Date (min/max):
+        <input type="date" name="date" min="2024-01-01" max="2025-12-31"
+      /></label>
+      <label>Month: <input type="month" name="month" /></label>
+      <label>Time: <input type="time" name="time" /></label>
+      <label>Week: <input type="week" name="week" /></label>
+
+      <!-- Color -->
+      <label>Color Picker: <input type="color" name="color" /></label>
+
+      <!-- Boolean Inputs -->
+      <label>Checkbox: <input type="checkbox" name="checkbox" /></label>
+      <label>Radio 1: <input type="radio" name="radio" value="1" /></label>
+      <label>Radio 2: <input type="radio" name="radio" value="2" /></label>
+
+      <!-- File Upload -->
+      <label
+        >File Upload (Images only):
+        <input type="file" name="file" accept="image/*"
+      /></label>
+      <label
+        >File Upload (Documents):
+        <input type="file" name="filedoc" accept=".pdf,.doc,.docx,.txt"
+      /></label>
+
+      <!-- Buttons -->
+      <button type="button" onclick="alert('Button clicked!')">Button</button>
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+
+      <!-- Additional Attributes -->
+      <label
+        >Autocomplete Text: <input type="text" name="auto" autocomplete="on"
+      /></label>
+
+      <!-- Deleted Element Example -->
+      <p><del>This text is deleted.</del></p>
+
+      <!-- audio -->
+
+      <div class="multimedia">
+        <video width="640" height="360" controls>
+          <source src="video.mp4" type="video/mp4" />
+          <source src="video.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
+
+        <audio controls>
+          <source src="audio.mp3" type="audio/mpeg" />
+          <source src="audio.ogg" type="audio/ogg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </form>
+  </body>
+</html>

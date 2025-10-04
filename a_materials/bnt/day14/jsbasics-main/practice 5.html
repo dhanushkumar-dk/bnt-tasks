@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p>Json Object Methods</p>
+    <script>
+      let obj = { name: "Rajesh", age: 25 };
+
+      console.log(Object.keys(obj)); // ["name", "age"]
+      console.log(Object.values(obj)); // ["Rajesh", 25]
+      console.log(Object.entries(obj)); // [["name", "Rajesh"], ["age", 25]]
+
+      // Add property
+      obj.city = "TN";
+
+      //Update
+      obj.name = "Kevin";
+      obj.city = "Mumbai";
+
+      // Delete property
+      delete obj.age;
+
+      console.log(obj); // { name: "Kevin", city: "Mumbai" }
+
+      const person = {
+        name: "Upendra",
+        address: {
+          city: "Chennai",
+          pincode: 600001,
+        },
+        hobbies: ["Reading", "Coding", "Traveling"],
+        showDetails: function () {
+          // 'this' refers to the current object 'person'
+          console.log("Name:", this.name);
+          console.log("City:", this.address.city);
+          console.log("First Hobby:", this.hobbies[0]);
+        },
+      };
+
+      // Call the function
+      person.showDetails();
+
+      const person1 = {
+        name: "Prakash",
+        showName: () => {
+          console.log(this.name); //undefined
+        },
+      };
+      person1.showName();
+
+      const obj1 = {
+        name: "Krishna",
+        greet: function () {
+          console.log(this.name);
+        },
+      };
+      obj1.greet();
+
+      const obj2 = {
+        name: "Praveen",
+        greet: function () {
+          const arrow = () => {
+            console.log(this.name);
+          };
+          arrow();
+        },
+      };
+      obj2.greet();
+    </script>
+  </body>
+</html>

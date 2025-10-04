@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML FORMS</title>
+
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Registration FORM</h2>
+
+      <form>
+        <div class="fname">
+          <label for="fname">First name:</label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="Eg: Dhanush"
+            required
+          />
+        </div>
+
+        <div class="lname">
+          <label for="lname">Last name:</label>
+          <input
+            type="text"
+            id=""
+            name="lname"
+            placeholder="Eg: Kumar"
+            required
+          /><br />
+        </div>
+
+        <div class="age">
+          <label for="age">Age:</label>
+          <input type="number" name="age" id="age" step="2" required />
+        </div>
+
+        <div class="dob">
+          <label for="dob">DOB:</label>
+          <input
+            type="date"
+            name="dob"
+            id="dob"
+            min="2000-01-01"
+            max="2005-12-31"
+            value="2000-01-01"
+            required
+          />
+        </div>
+
+        <div class="email">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required />
+        </div>
+
+        <div class="password"></div>
+
+        <div class="task-completion">
+          <p>Task status</p>
+          <input
+            type="radio"
+            id="completed"
+            name="task_status"
+            value="completed"
+          />
+          <label for="completed">Completed</label><br />
+
+          <input
+            type="radio"
+            id="not-completed"
+            name="task_status"
+            value="not-completed"
+          />
+          <label for="not-completed">Not Completed</label><br />
+        </div>
+
+        <div class="checkbox">
+          <p>Select the languages known</p>
+          <input type="checkbox" name="skills" id="html" />
+          <label for="html">HTML</label><br />
+
+          <input type="checkbox" name="skills" id="css" />
+          <label for="css">CSS</label><br />
+
+          <input type="checkbox" name="skills" id="javascript" />
+          <label for="javascript">JavaScript</label><br />
+        </div>
+
+        <div class="file-picker">
+          <label for="file-picker">Upload your resume</label>
+          <input type="file" id="file-picker" name="file-picker" />
+        </div>
+        <div
+          class="submit"
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          <input type="submit" name="submit" id="submit" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

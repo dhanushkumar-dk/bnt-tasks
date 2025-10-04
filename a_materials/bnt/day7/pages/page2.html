@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Difference between &lt;strong&gt; and &lt;b&gt; Tags in HTML</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 40px;
+        background-color: #f8f9fa;
+        color: #333;
+        line-height: 1.6;
+      }
+      h1,
+      h2 {
+        color: #0077cc;
+      }
+      section {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+      }
+      code {
+        background-color: #eee;
+        padding: 2px 6px;
+        border-radius: 5px;
+        font-family: Consolas, monospace;
+      }
+      .example {
+        background-color: #f1f1f1;
+        padding: 15px;
+        border-left: 5px solid #0077cc;
+        margin: 15px 0;
+        font-size: 1.05rem;
+      }
+      ul {
+        padding-left: 20px;
+      }
+      .note {
+        font-style: italic;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Difference Between &lt;strong&gt; and &lt;b&gt; Tags in HTML</h1>
+
+    <section>
+      <h2>1. Overview</h2>
+      <p>
+        HTML provides both <code>&lt;strong&gt;</code> and
+        <code>&lt;b&gt;</code> tags to make text appear bold. However, they
+        serve different purposes:
+      </p>
+      <ul>
+        <li>
+          <strong>&lt;strong&gt;:</strong> Indicates semantic importance or
+          urgency in the content.
+        </li>
+        <li>
+          <strong>&lt;b&gt;:</strong> Used purely for styling, with no added
+          meaning.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>2. Visual Appearance</h2>
+      <p>
+        Both tags render bold text in the browser by default. However, their
+        **underlying meaning** is different:
+      </p>
+      <ul>
+        <li><code>&lt;strong&gt;</code> → Bold <em>with meaning</em></li>
+        <li><code>&lt;b&gt;</code> → Bold <em>without meaning</em></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Accessibility & Screen Readers</h2>
+      <p>
+        Screen readers treat <code>&lt;strong&gt;</code> as a cue to emphasize
+        the importance of the text, often changing the tone or pausing for
+        effect. The <code>&lt;b&gt;</code> tag has
+        <strong>no such semantic effect</strong> in assistive technologies.
+      </p>
+      <div class="example">
+        <p>Alert: <strong>System failure detected!</strong></p>
+      </div>
+      <p class="note">
+        Screen readers will emphasize "System failure detected!" when using
+        <code>&lt;strong&gt;</code>.
+      </p>
+    </section>
+
+    <section>
+      <h2>4. SEO Impact</h2>
+      <p>
+        Because <code>&lt;strong&gt;</code> adds semantic meaning, search
+        engines may consider that text as more relevant.
+        <code>&lt;b&gt;</code> has no such SEO benefit.
+      </p>
+      <div class="example">
+        <p>Our <strong>best-selling product</strong> is now on discount!</p>
+      </div>
+      <p class="note">
+        Here, the phrase has importance for both users and search engines.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Historical Context</h2>
+      <p>
+        In older versions of HTML (before HTML5), <code>&lt;b&gt;</code> was
+        commonly used for bolding important text, even when the intention was
+        semantic. HTML5 introduced better semantic tags like
+        <code>&lt;strong&gt;</code> to improve accessibility and structure.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Practical Examples</h2>
+
+      <h3>Example 1: Using &lt;strong&gt;</h3>
+      <div class="example">
+        <p>
+          <strong>Warning:</strong> Do not shut down the system while it is
+          updating.
+        </p>
+      </div>
+      <p>
+        <code>&lt;strong&gt;</code> gives emphasis and importance to the
+        warning.
+      </p>
+
+      <h3>Example 2: Using &lt;b&gt;</h3>
+      <div class="example">
+        <p>Choose your plan: <b>Basic</b>, <b>Standard</b>, <b>Premium</b></p>
+      </div>
+      <p>
+        Here, <code>&lt;b&gt;</code> is used for visual styling only, without
+        semantic meaning.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. When to Use Which?</h2>
+      <ul>
+        <li>
+          Use <code>&lt;strong&gt;</code> when the text has critical importance
+          or meaning (e.g., warnings, highlights, instructions).
+        </li>
+        <li>
+          Use <code>&lt;b&gt;</code> when you want to make text visually bold
+          for decorative reasons (e.g., labels, headings, keywords).
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8. Summary Table</h2>
+      <table
+        border="1"
+        cellpadding="10"
+        cellspacing="0"
+        style="width: 100%; border-collapse: collapse"
+      >
+        <thead style="background-color: #0077cc; color: white">
+          <tr>
+            <th>Feature</th>
+            <th>&lt;strong&gt;</th>
+            <th>&lt;b&gt;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Purpose</td>
+            <td>Semantic Importance</td>
+            <td>Visual Style</td>
+          </tr>
+          <tr>
+            <td>Accessibility</td>
+            <td>Recognized by screen readers</td>
+            <td>Ignored by screen readers</td>
+          </tr>
+          <tr>
+            <td>SEO Relevance</td>
+            <td>Yes</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Usage</td>
+            <td>Alerts, warnings, highlights</td>
+            <td>Labels, product names, categories</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>9. Conclusion</h2>
+      <p>
+        Although <code>&lt;strong&gt;</code> and <code>&lt;b&gt;</code> may
+        appear visually similar, their **intended use is different**. Always
+        prefer semantic tags like <code>&lt;strong&gt;</code> when conveying
+        importance or emphasis, and reserve <code>&lt;b&gt;</code> for purely
+        stylistic needs.
+      </p>
+    </section>
+  </body>
+</html>

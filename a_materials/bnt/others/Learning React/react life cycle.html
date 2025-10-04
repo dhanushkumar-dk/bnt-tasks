@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React Lifecycle Flowchart</title>
+  </head>
+  <body>
+    <canvas
+      id="lifecycleCanvas"
+      width="1000"
+      height="1500"
+      style="border: 1px solid black"
+    ></canvas>
+
+    <script>
+      const c = document.getElementById("lifecycleCanvas");
+      const ctx = c.getContext("2d");
+
+      ctx.font = "14px Arial";
+      ctx.textAlign = "center";
+
+      // Function to draw box
+      function drawBox(x, y, text, color) {
+        ctx.beginPath();
+        ctx.fillStyle = color || "white";
+        ctx.fillRect(x - 150, y - 20, 300, 40);
+        ctx.strokeRect(x - 150, y - 20, 300, 40);
+        ctx.fillStyle = "black";
+        ctx.fillText(text, x, y + 5);
+      }
+
+      // Function to draw arrow
+      function drawArrow(fromX, fromY, toX, toY) {
+        ctx.beginPath();
+        ctx.moveTo(fromX, fromY);
+        ctx.lineTo(toX, toY);
+        ctx.stroke();
+
+        // Arrowhead
+        let angle = Math.atan2(toY - fromY, toX - fromX);
+        ctx.beginPath();
+        ctx.moveTo(toX, toY);
+        ctx.lineTo(
+          toX - 6 * Math.cos(angle - Math.PI / 6),
+          toY - 6 * Math.sin(angle - Math.PI / 6)
+        );
+        ctx.lineTo(
+          toX - 6 * Math.cos(angle + Math.PI / 6),
+          toY - 6 * Math.sin(angle + Math.PI / 6)
+        );
+        ctx.closePath();
+        ctx.fill();
+      }
+
+      let startY = 40;
+      let gap = 60;
+      let centerX = 500;
+
+      // Mounting Phase
+      ctx.fillStyle = "blue";
+      ctx.fillText("MOUNTING PHASE", centerX, startY);
+      ctx.fillStyle = "black";
+
+      let mountingMethods = [
+        "constructor()",
+        "static getDerivedStateFromProps(props, state)",
+        "render()",
+        "componentDidMount()",
+      ];
+
+      mountingMethods.forEach((method, index) => {
+        let y = startY + (index + 1) * gap;
+        drawBox(centerX, y, method, "#e0f7fa");
+        if (index !== 0) {
+          drawArrow(centerX, y - gap + 20, centerX, y - 20);
+        }
+      });
+
+      // Updating Phase
+      startY += (mountingMethods.length + 1) * gap;
+      ctx.fillStyle = "green";
+      ctx.fillText("UPDATING PHASE", centerX, startY);
+      ctx.fillStyle = "black";
+
+      let updatingMethods = [
+        "static getDerivedStateFromProps(props, state)",
+        "shouldComponentUpdate(nextProps, nextState)",
+        "render()",
+        "getSnapshotBeforeUpdate(prevProps, prevState)",
+        "componentDidUpdate(prevProps, prevState, snapshot)",
+      ];
+
+      updatingMethods.forEach((method, index) => {
+        let y = startY + (index + 1) * gap;
+        drawBox(centerX, y, method, "#e8f5e9");
+        if (index !== 0) {
+          drawArrow(centerX, y - gap + 20, centerX, y - 20);
+        }
+      });
+
+      // Unmounting Phase
+      startY += (updatingMethods.length + 1) * gap;
+      ctx.fillStyle = "red";
+      ctx.fillText("UNMOUNTING PHASE", centerX, startY);
+      ctx.fillStyle = "black";
+
+      drawBox(centerX, startY + gap, "componentWillUnmount()", "#ffebee");
+      drawArrow(centerX, startY + 20, centerX, startY + gap - 20);
+
+      // Error Handling Phase
+      startY += 2 * gap;
+      ctx.fillStyle = "orange";
+      ctx.fillText("ERROR HANDLING PHASE", centerX, startY);
+      ctx.fillStyle = "black";
+
+      let errorHandlingMethods = [
+        "static getDerivedStateFromError(error)",
+        "componentDidCatch(error, info)",
+      ];
+
+      errorHandlingMethods.forEach((method, index) => {
+        let y = startY + (index + 1) * gap;
+        drawBox(centerX, y, method, "#fff3e0");
+        if (index !== 0) {
+          drawArrow(centerX, y - gap + 20, centerX, y - 20);
+        }
+      });
+    </script>
+  </body>
+</html>

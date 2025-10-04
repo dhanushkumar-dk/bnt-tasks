@@ -1,0 +1,41 @@
+freepik.com
+
+
+
+
+create a respo 3 layer lout using lfx-bx [10 cards]
+
+
+create a card layout, pad, mar, brd, bgc
+
+
+
+
+
+
+
+create a sidebar and navbar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+create a horizontal nav menu with li items and hover color change
+
+
+chage the clr of the links normal hover active visited
+
+remove def mar, pad using {*}

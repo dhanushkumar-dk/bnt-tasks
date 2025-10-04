@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery Get/Set</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <input type="text" id="myInput" value="Hello" />
+    <button id="getBtn">Get Value</button>
+    <button id="setBtn">Set Value</button>
+
+    <br />
+    <p id="value">Value Set</p>
+
+    <script>
+      var value;
+      // Get value when button is clicked
+      $("#getBtn").click(function () {
+        value = $("#myInput").val();
+        alert("Value is: " + value);
+      });
+
+      // Set value when button is clicked
+      $("#setBtn").click(function () {
+        $("#value").text(value);
+        $("#myInput").val(value);
+      });
+    </script>
+  </body>
+</html>

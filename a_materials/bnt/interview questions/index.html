@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Java Interview Questions - Quick Review</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+        padding: 20px;
+        color: #333;
+      }
+      h1,
+      h2 {
+        color: #005f99;
+      }
+      pre {
+        background-color: #eef;
+        padding: 10px;
+        border-left: 4px solid #005f99;
+        overflow-x: auto;
+      }
+      .question {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Java Interview Questions - Quick Review</h1>
+
+    <!-- Bitwise Operations Question -->
+    <div class="question">
+      <h2>1. Bitwise Operations</h2>
+      <p><strong>Question:</strong></p>
+      <pre>
+int a = 5;
+int b = 7;
+
+System.out.println("a & b = " + (a & b));
+System.out.println("a | b = " + (a | b));
+System.out.println("a ^ b = " + (a ^ b));
+    </pre
+      >
+      <p><strong>Expected Output:</strong></p>
+      <pre>
+a & b = 5
+a | b = 7
+a ^ b = 2
+    </pre
+      >
+      <p><strong>Concepts:</strong> Bitwise AND, OR, XOR operations.</p>
+    </div>
+
+    <!-- Polymorphism Question -->
+    <div class="question">
+      <h2>2. Polymorphism (Easy Level)</h2>
+      <pre>
+class Animal {
+    void makeSound() {
+        System.out.println("Some generic animal sound");
+    }
+}
+
+class Dog extends Animal {
+    void makeSound() {
+        System.out.println("Bark");
+    }
+}
+
+class Cat extends Animal {
+    void makeSound() {
+        System.out.println("Meow");
+    }
+}
+
+public class TestPolymorphism {
+    public static void main(String[] args) {
+        Animal a1 = new Dog();
+        Animal a2 = new Cat();
+        Animal a3 = new Animal();
+
+        a1.makeSound();
+        a2.makeSound();
+        a3.makeSound();
+    }
+}
+    </pre
+      >
+      <p><strong>Expected Output:</strong></p>
+      <pre>
+Bark
+Meow
+Some generic animal sound
+    </pre
+      >
+      <p><strong>Concepts:</strong> Method overriding, runtime polymorphism.</p>
+    </div>
+
+    <!-- Parent reference to child object -->
+    <div class="question">
+      <h2>3. Parent Reference, Child Object</h2>
+      <pre>
+class Animal {
+    void makeSound() {
+        System.out.println("Some generic animal sound");
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    void makeSound() {
+        System.out.println("Bark");
+    }
+}
+
+public class TestPolymorphism {
+    public static void main(String[] args) {
+        Animal a;
+        a = new Dog();
+
+        a.makeSound();
+    }
+}
+    </pre
+      >
+      <p>
+        <strong>Concepts:</strong> Polymorphism, casting, accessing subclass
+        methods.
+      </p>
+    </div>
+
+    <!-- String Initialization and concat -->
+    <div class="question">
+      <h2>4. String Initialization and concat()</h2>
+      <pre>
+public class StringTest {
+    public static void main(String[] args) {
+        String str1;
+        String str2 = str1.concat("random text");
+
+        System.out.println(str2);
+    }
+}
+    </pre
+      >
+      <p>
+        <strong>Problem:</strong> str1 is declared but not initialized —
+        Compile-time error.
+      </p>
+      <p><strong>Corrected Version:</strong></p>
+      <pre>
+String str1 = "";
+String str2 = str1.concat("random text");
+System.out.println(str2); // Output: random text
+    </pre
+      >
+      <p>
+        <strong>Concepts:</strong> Local variable initialization, immutability.
+      </p>
+    </div>
+
+    <!-- String reverse trick -->
+    <div class="question">
+      <h2>5. String reverse(1, 4) – Trick Question</h2>
+      <pre>
+public class StringTest {
+    public static void main(String[] args) {
+        String str = "abcdef";
+        System.out.println(str.reverse(1, 4));
+    }
+}
+    </pre
+      >
+      <p>
+        <strong>Problem:</strong> <code>reverse(int, int)</code> does not exist
+        in String — Compile-time error.
+      </p>
+      <p><strong>Corrected Version (reverse substring 1 to 4):</strong></p>
+      <pre>
+String str = "abcdef";
+String sub = str.substring(1, 4); // "bcd"
+String reversed = new StringBuilder(sub).reverse().toString();
+System.out.println(reversed); // Output: dcb
+    </pre
+      >
+      <p>
+        <strong>Concepts:</strong> substring(), StringBuilder.reverse(), string
+        immutability.
+      </p>
+    </div>
+    <!-- Thread behavior question -->
+    <div class="question">
+      <h2>6. Thread Behavior: run() vs start()</h2>
+      <pre>
+public class ThreadQuestion extends Thread {
+    public void run() {
+        System.out.println("Thread is running");
+    }
+
+    public static void main(String[] args) {
+        ThreadQuestion t = new ThreadQuestion();
+        t.run();   // Call 1
+        t.run();   // Call 2
+        t.start(); // Call 3
+    }
+}
+    </pre
+      >
+      <p><strong>❓ Your Task:</strong></p>
+      <ul>
+        <li>
+          What is the difference between calling <code>run()</code> and
+          <code>start()</code>?
+        </li>
+        <li>How many times will "Thread is running" be printed?</li>
+        <li>What happens if you call <code>start()</code> again?</li>
+      </ul>
+      <p><strong>✅ Expected Output:</strong></p>
+      <pre>
+Thread is running
+Thread is running
+Thread is running
+    </pre
+      >
+      <p><strong>Explanation:</strong></p>
+      <ul>
+        <li>
+          <code>t.run()</code> (Call 1 and Call 2) runs like a normal method —
+          in the main thread.
+        </li>
+        <li>
+          <code>t.start()</code> (Call 3) creates a new thread and invokes
+          <code>run()</code> in that thread.
+        </li>
+        <li>Total: "Thread is running" printed 3 times.</li>
+        <li>
+          If you call <code>start()</code> again on the same thread object, it
+          will throw an <code>IllegalThreadStateException</code>.
+        </li>
+      </ul>
+      <p>
+        <strong>Concepts:</strong> Difference between <code>start()</code> and
+        <code>run()</code>, thread lifecycle, multi-threading basics.
+      </p>
+    </div>
+
+    <!-- Abstract class implementation -->
+    <div class="question">
+      <h2>7. Abstract Class and Implementation</h2>
+      <pre>
+abstract class Shape {
+    abstract void draw();
+}
+
+class Circle extends Shape {
+    @Override
+    void draw() {
+        System.out.println("Drawing a Circle");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Shape s = new Circle(); // Upcasting to abstract class
+        s.draw();               // Calls the implemented method
+    }
+}
+    </pre
+      >
+
+      <p><strong>❓ Your Task:</strong></p>
+      <ul>
+        <li>
+          Create an abstract class <code>Shape</code> with an abstract method
+          <code>draw()</code>.
+        </li>
+        <li>
+          Implement this method in a subclass called <code>Circle</code> that
+          prints "Drawing a Circle".
+        </li>
+        <li>
+          Create an object in the <code>main</code> method and call
+          <code>draw()</code>.
+        </li>
+      </ul>
+
+      <p><strong>✅ Expected Output:</strong></p>
+      <pre>
+Drawing a Circle
+    </pre
+      >
+
+      <p>
+        <strong>Concepts:</strong> Abstract classes, method overriding,
+        inheritance, dynamic dispatch.
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial;
+        margin-top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    try catch finally
+    <script>
+      function divideNumbers(a, b) {
+        try {
+          console.log("Trying to divide", a, "by", b);
+
+          if (b === 0) {
+            throw new Error("Cannot divide by zero");
+          }
+
+          let result = a / b;
+          console.log("Result:", result);
+        } catch (error) {
+          console.log("Error:", error.message);
+        } finally {
+          console.log("Division operation finished.\n");
+        }
+      }
+      divideNumbers(10, 2);
+      divideNumbers(10, 0);
+    </script>
+  </body>
+</html>

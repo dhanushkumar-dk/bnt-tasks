@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #df9393;
+}
+
+.container {
+  border: solid 3px black;
+  border-radius: 32px;
+  /* padding: 20px; */
+  background-color: #ffbf00;
+}
+
+a {
+  text-decoration: none;
+  /* padding: 10px; */
+}
+
+li {
+  list-style: none;
+  background-color: #ffbf00;
+  color: black;
+  padding: 20px 50px;
+  text-align: center;
+}
+
+.pointme:hover {
+  transition: background-color 0.5s ease-in-out;
+  background-color: #fff;
+}

@@ -1,0 +1,16 @@
+create like ecom page or something else
+
+
+
+
+create a html page containg all tags, set a page title, format text, create a unordered list, ordered list, desc list, 
+
+a tag (obsolute and relative ref)
+
+insert a img, with height and width and other attributes as well
+
+create a navbar ()
+
+semantic tags
+
+different font-style (font styles, font families)

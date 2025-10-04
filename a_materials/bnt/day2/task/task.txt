@@ -1,0 +1,9 @@
+create an html file uses the following
+
+inputs [text, email, password,, button, checkbox, color, date [min, max, month], submit, number [min, max, step, default], ph number, radio, range, reset, color, search, time, url, week, file types, auto complete, url, del, etc]
+
+
+session storage
+local storage
+
+audio video

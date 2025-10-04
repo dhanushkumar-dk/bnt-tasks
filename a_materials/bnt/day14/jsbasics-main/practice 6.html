@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>getElementsByClassName Example</title>
+  </head>
+  <body>
+    <p class="myClass">Item 1</p>
+    <p class="myClass">Item 2</p>
+    <button onclick="changeText()">Change All</button>
+    <div id="container"></div>
+    <div id="message">
+      <span>Old message</span>
+    </div>
+    <ul id="myList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <script>
+      function changeText() {
+        let items = document.getElementsByClassName("myClass");
+
+        console.log(items[0].innerText);
+        console.log(items[1].textContent);
+
+        for (let i = 0; i < items.length; i++) {
+          items[i].textContent = "Updated by Class!";
+        }
+
+        const container = document.getElementById("container");
+        container.innerHTML = "<p><strong>Hello</strong>, <em>world!</em></p>";
+
+        const msgDiv = document.getElementById("message");
+        msgDiv.innerHTML =  
+          "<h2>New <span style='color: red;'>Important</span> Message!</h2>";
+
+        const list = document.getElementById("myList");
+        list.innerHTML += "<li><b>Item 4</b></li>";
+
+        // let element = document.getElementsByClassName("myClass");
+        // element[0].textContent = "Changed by getElementsByClassName!";
+      }
+    </script>
+  </body>
+</html>

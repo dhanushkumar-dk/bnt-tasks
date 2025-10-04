@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Destructuring – Full Guide</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+        background: #f9f9f9;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+      code {
+        background: #eee;
+        padding: 2px 4px;
+        border-radius: 4px;
+      }
+      pre {
+        background: #eee;
+        padding: 10px;
+        border-radius: 4px;
+        overflow-x: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Destructuring – Beginner to Ultra Pro</h1>
+
+    <h2>1. Array Destructuring</h2>
+
+    <h3>Basic Example</h3>
+    <pre><code>
+const numbers = [10, 20, 30];
+const [first, second, third] = numbers;
+console.log(first);  // 10
+console.log(second); // 20
+console.log(third);  // 30
+  </code></pre>
+
+    <h3>Skipping Elements</h3>
+    <pre><code>
+const data = [1, 2, 3, 4];
+const [a, , c] = data;
+console.log(a); // 1
+console.log(c); // 3
+  </code></pre>
+
+    <h3>Default Values</h3>
+    <pre><code>
+const arr = [5];
+const [x, y = 10] = arr;
+console.log(x); // 5
+console.log(y); // 10
+  </code></pre>
+
+    <h2>2. Object Destructuring</h2>
+
+    <h3>Basic Example</h3>
+    <pre><code>
+const person = { name: "Ali", age: 22 };
+const { name, age } = person;
+console.log(name); // "Ali"
+console.log(age);  // 22
+  </code></pre>
+
+    <h3>Renaming Variables</h3>
+    <pre><code>
+const user = { id: 101, role: "admin" };
+const { id: userId, role: userRole } = user;
+console.log(userId);   // 101
+console.log(userRole); // "admin"
+  </code></pre>
+
+    <h3>Default Values</h3>
+    <pre><code>
+const settings = { theme: "dark" };
+const { theme, fontSize = 14 } = settings;
+console.log(theme);    // "dark"
+console.log(fontSize); // 14
+  </code></pre>
+
+    <h2>3. Nested Destructuring</h2>
+
+    <h3>Nested Object</h3>
+    <pre><code>
+const student = {
+  name: "Sara",
+  marks: {
+    maths: 90,
+    physics: 85
+  }
+};
+const {
+  marks: { maths, physics }
+} = student;
+console.log(maths);  // 90
+console.log(physics);// 85
+  </code></pre>
+
+    <h3>Nested Array</h3>
+    <pre><code>
+const numbers = [1, [2, 3], 4];
+const [a, [b, c], d] = numbers;
+console.log(a, b, c, d); // 1 2 3 4
+  </code></pre>
+
+    <h2>4. Function Parameter Destructuring</h2>
+
+    <h3>Object as Parameter</h3>
+    <pre><code>
+function introduce({ name, age }) {
+  console.log(`My name is ${name} and I am ${age} years old.`);
+}
+const user = { name: "Ahmed", age: 25 };
+introduce(user);
+  </code></pre>
+
+    <h3>Array as Parameter</h3>
+    <pre><code>
+function sum([a, b]) {
+  return a + b;
+}
+console.log(sum([5, 7])); // 12
+  </code></pre>
+
+    <h2>5. Ultra Pro Level</h2>
+
+    <h3>Destructuring with Rest Operator</h3>
+    <pre><code>
+const fruits = ["apple", "banana", "mango", "orange"];
+const [first, ...rest] = fruits;
+console.log(first); // "apple"
+console.log(rest);  // ["banana", "mango", "orange"]
+  </code></pre>
+
+    <h3>Combined Object & Array Destructuring</h3>
+    <pre><code>
+const data = {
+  title: "Developer",
+  skills: ["JavaScript", "React", "Node.js"]
+};
+const {
+  title,
+  skills: [primary, secondary, tertiary]
+} = data;
+console.log(title);    // "Developer"
+console.log(primary);  // "JavaScript"
+console.log(secondary);// "React"
+console.log(tertiary); // "Node.js"
+  </code></pre>
+
+    <h3>Nested with Renaming and Default</h3>
+    <pre><code>
+const employee = {
+  id: 501,
+  profile: {
+    name: "Bilal",
+    dept: "IT"
+  }
+};
+const {
+  profile: { name: employeeName, dept = "General" },
+  role = "Intern"
+} = employee;
+console.log(employeeName); // "Bilal"
+console.log(dept);         // "IT"
+console.log(role);         // "Intern"
+  </code></pre>
+
+    <h3>Destructuring in Loops</h3>
+    <pre><code>
+const users = [
+  { name: "Ali", age: 22 },
+  { name: "Sara", age: 25 }
+];
+for (const { name, age } of users) {
+  console.log(`${name} is ${age} years old.`);
+}
+  </code></pre>
+
+    <h3>Destructuring Returned Values</h3>
+    <pre><code>
+function getScores() {
+  return [70, 80, 90];
+}
+const [maths, physics, chemistry] = getScores();
+console.log(maths, physics, chemistry); // 70 80 90
+  </code></pre>
+
+    <h2>✔️ Summary</h2>
+    <ul>
+      <li>Cleaner and shorter code</li>
+      <li>Easy extraction of multiple properties</li>
+      <li>Handles nested data elegantly</li>
+      <li>Useful in function parameters and loops</li>
+    </ul>
+  </body>
+</html>

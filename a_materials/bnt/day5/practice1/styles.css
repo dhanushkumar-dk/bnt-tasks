@@ -1,0 +1,38 @@
+/* Flexbox container classes */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Center vertically in viewport */
+  background-color: #f5f5f5;
+}
+
+/* Task list styling */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Individual task styling */
+.task {
+  list-style: none;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect with pseudo-element */
+.task:hover {
+  background-color: #f0f8ff;
+}
+
+.task:hover::after {
+  content: " 😊";
+  position: absolute;
+  right: 0px;
+}

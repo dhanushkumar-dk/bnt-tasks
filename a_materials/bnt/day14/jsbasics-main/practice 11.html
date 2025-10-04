@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Attribute Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <input type="text" id="name" />
+    <button onclick="getName()">Submit</button>
+
+    <script>
+      function getName() {
+        let name = $("#name").val(); // still using jQuery for value retrieval
+        alert("Name is: " + name);
+      }
+
+      function handleClick() {
+        alert("Button clicked");
+      }
+
+      function handleMouseOver() {
+        console.log("Mouse over the button");
+      }
+
+      function handleMouseOut() {
+        console.log("Mouse left the button");
+      }
+
+      function handleDoubleClick() {
+        alert("Button double clicked");
+      }
+
+      function handleFocus() {
+        console.log("Input field focused");
+      }
+
+      function handleBlur() {
+        console.log("Input field lost focus");
+      }
+
+      function handleChange(select) {
+        alert("You selected: " + select.value);
+      }
+
+      function handleKeyDown(event) {
+        console.log("Key pressed: " + event.key);
+      }
+    </script>
+
+    <br /><br /><br /><br />
+
+    <button onclick="handleClick()" onmouseover="handleMouseOver()">
+      Click
+    </button>
+    <br /><br /><br /><br />
+
+    <button onmouseout="handleMouseOut()">Move Out</button>
+    <br /><br /><br /><br />
+
+    <button ondblclick="handleDoubleClick()">Double Click</button>
+    <br /><br /><br /><br />
+
+    <input
+      type="text"
+      id="nameInput"
+      placeholder="Enter name"
+      onfocus="handleFocus()"
+      onblur="handleBlur()"
+    />
+    <br /><br /><br /><br />
+
+    <select id="city" onchange="handleChange(this)">
+      <option>Select City</option>
+      <option>Chennai</option>
+      <option>Coimbatore</option>
+    </select>
+    <br /><br /><br /><br />
+
+    <input
+      type="text"
+      id="keyBox"
+      placeholder="Type something"
+      onkeydown="handleKeyDown(event)"
+    />
+    <br /><br /><br /><br />
+  </body>
+</html>

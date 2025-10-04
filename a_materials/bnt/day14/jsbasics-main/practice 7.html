@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>getElementById Example</title>
+  </head>
+  <body>
+    <p id="myPara">Hello!</p>
+    <button onclick="changeText()">Click Me</button>
+
+    <div id="example">
+      Hello
+      <span style="display: none">Ravikanth</span>
+      <span style="color: red">Visible</span>
+    </div>
+
+    <script>
+      function changeText() {
+        document.getElementById("myPara").innerText = "Changed by ID!";
+      }
+      //       textContent → Reads from the code
+      //       innerText → Reads from the screen
+      const div = document.getElementById("example");
+      console.log("textContent:", div.textContent);
+      console.log("innerText:", div.innerText);
+    </script>
+  </body>
+</html>

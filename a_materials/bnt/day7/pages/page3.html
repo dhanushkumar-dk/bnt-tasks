@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button vs Input Type Button</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        line-height: 1.8;
+        color: #2c3e50;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        color: #2c3e50;
+      }
+
+      code {
+        background-color: #f4f4f4;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: Consolas, monospace;
+      }
+
+      .example {
+        background-color: #f0f8ff;
+        padding: 15px;
+        border-left: 5px solid #2980b9;
+        margin: 20px 0;
+      }
+
+      button,
+      input[type="button"] {
+        padding: 10px 20px;
+        margin: 10px 0;
+        font-size: 16px;
+        border: none;
+        background-color: #3498db;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover,
+      input[type="button"]:hover {
+        background-color: #2c3e50;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid #aaa;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+
+      .section {
+        margin-bottom: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>&lt;button&gt; vs &lt;input type="button"&gt;</h1>
+
+    <div class="section">
+      <h2>1. Introduction</h2>
+      <p>
+        In HTML, there are two common ways to create a clickable button:
+        <strong><code>&lt;button&gt;</code></strong> and
+        <strong><code>&lt;input type="button"&gt;</code></strong
+        >. While both look similar on a web page and can be used to perform
+        actions, they have important differences in usage, flexibility, and
+        behavior.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>2. &lt;button&gt; Tag</h2>
+      <p>
+        The <code>&lt;button&gt;</code> element is a container tag and can
+        include not just text, but also images, icons, and nested HTML elements.
+        It is highly customizable and can serve different purposes depending on
+        its <code>type</code> attribute:
+      </p>
+      <ul>
+        <li>
+          <code>type="button"</code>: Acts like a standard button (default in
+          JavaScript functions)
+        </li>
+        <li>
+          <code>type="submit"</code>: Submits the form (default inside a form)
+        </li>
+        <li><code>type="reset"</code>: Resets the form fields</li>
+      </ul>
+
+      <div class="example">
+        <strong>Example:</strong><br />
+        <button type="button" onclick="alert('Clicked a button tag')">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png"
+            width="20"
+            style="vertical-align: middle"
+          />
+          <span style="margin-left: 8px">Click Me</span>
+        </button>
+        <pre><code>
+&lt;button type="button" onclick="alert('Clicked a button tag')"&gt;
+  &lt;img src="icon.png" width="20" /&gt;
+  &lt;span&gt;Click Me&lt;/span&gt;
+&lt;/button&gt;
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>3. &lt;input type="button"&gt; Tag</h2>
+      <p>
+        The <code>&lt;input&gt;</code> element with
+        <code>type="button"</code> is an empty or "void" tag. It cannot include
+        inner HTML or other tags. The only way to define its label is using the
+        <code>value</code> attribute.
+      </p>
+
+      <div class="example">
+        <strong>Example:</strong><br />
+        <input
+          type="button"
+          value="Click Me"
+          onclick="alert('Clicked input button')"
+        />
+        <pre><code>
+&lt;input type="button" value="Click Me" onclick="alert('Clicked input button')" /&gt;
+      </code></pre>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>4. Visual Comparison</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>&lt;button&gt;</th>
+            <th>&lt;input type="button"&gt;</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Contains HTML content</td>
+            <td>✅ Yes</td>
+            <td>❌ No</td>
+          </tr>
+          <tr>
+            <td>Supports icons or images</td>
+            <td>✅ Yes</td>
+            <td>❌ No</td>
+          </tr>
+          <tr>
+            <td>Supports text formatting (e.g., bold, span)</td>
+            <td>✅ Yes</td>
+            <td>❌ No</td>
+          </tr>
+          <tr>
+            <td>Uses <code>value</code> for label</td>
+            <td>❌ No (uses inner text)</td>
+            <td>✅ Yes</td>
+          </tr>
+          <tr>
+            <td>Multiple types (submit, reset, button)</td>
+            <td>✅ Yes</td>
+            <td>❌ Only "button"</td>
+          </tr>
+          <tr>
+            <td>Styling flexibility</td>
+            <td>✅ High</td>
+            <td>🔸 Limited</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>5. Form Behavior</h2>
+      <p>
+        Inside a form, a plain <code>&lt;button&gt;</code> without a
+        <code>type</code> defaults to <code>submit</code>. However,
+        <code>&lt;input type="button"&gt;</code> never submits a form.
+      </p>
+
+      <div class="example">
+        <form onsubmit="alert('Form Submitted'); return false;">
+          <button>Submit (default)</button>
+          <button
+            type="button"
+            onclick="alert('This will not submit the form')"
+          >
+            Click Me
+          </button>
+          <input
+            type="button"
+            value="Input Button (no submit)"
+            onclick="alert('Input button clicked')"
+          />
+        </form>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>6. Accessibility</h2>
+      <p>
+        Both elements are accessible to screen readers, but
+        <code>&lt;button&gt;</code> is generally preferred because it can
+        contain accessible HTML markup like ARIA labels, icons, and semantic
+        elements.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>7. Summary</h2>
+      <ul>
+        <li>
+          ✅ Use <code>&lt;button&gt;</code> when you want more flexibility,
+          better styling, and nested content like icons or spans.
+        </li>
+        <li>
+          ✅ Use <code>&lt;input type="button"&gt;</code> for simple, quick
+          buttons with just a label and a function.
+        </li>
+        <li>
+          ⚠️ Be careful with form submissions — always use
+          <code>type="button"</code> if you don't want the button to submit a
+          form.
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

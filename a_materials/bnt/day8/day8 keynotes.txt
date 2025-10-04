@@ -1,0 +1,199 @@
+<script defer> </script>              -         defer (to avoid pre-loading of js, place the script at the end of the body tag)
+						helps to parse the html content before loading scripts
+
+async vs defer in script tag
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bootstrap
+
+div  - [class types] - [container / container-fliud] 
+			[fixed width container / fluid container]
+
+
+normal container helps to add more styles to the content
+
+
+h-1 to h-6
+
+display-1 to display-6
+
+# text align Eg: <p> tags
+
+text-start, text-center, text-end
+
+
+
+# font weight   [fst - font style] 
+
+fw-bold
+fw-semibold
+fw-light
+fw-italic
+fw-normal
+
+# Text color
+
+text- [primary, success, danger, mudet, info, warning, secondary, white]
+
+bg-dark
+
+
+# padding
+
+ps-3  // padding-start
+
+
+
+# font style
+
+fs- [1 to 6] [largest to smallest]
+
+
+# text transformation
+
+text- [uppercase, lowercase, capitalize]
+
+# Background color
+
+bg- [primary, success, danger, warning, secondary, info]
+
+# Row and column
+
+Grid -> 1 row = 12 columns
+
+div.container
+div.row
+div.col-6
+p lorem
+
+div.col-3
+p
+div.col-3
+p
+
+
+
+div.row
+div.col-6 p
+div.col-6 p
+
+
+#  List inline and list inline items
+
+ul.list-inline
+li
+li
+li
+li.list-inline-item
+
+
+# padding
+
+px-
+py-
+pt-
+bg-dark
+text-white
+
+row
+
+col-12 col-md-6 [column medium device, 6 columns only]
+h1
+
+col-12 col-md-6
+nav.mt-3
+div.d-flex ju-c-start j-c-md-end gap-5 flex-wrap
+
+li.list-inline-item
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# full-image [contain]
+
+# based on parent [cover]
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# Cards with responsiveness
+
+bdy
+
+div.container py-4
+
+div.card
+.card-body
+h1.text-center card-body
+p.card-text text-center
+
+
+.row
+.col-12 col-sm-6 col-md-4 mt-2
+.card
+[
+img.img-fluid rounded
+.card-body
+.h2.mb-4
+p
+p
+]
+
+[--------  next card ---------]
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+# contact form
+
+
+div.container py-4 mb-4 bg-secondary col-6 id="contact"
+.row
+h2.text-center
+form action
+
+[.form-group my-3
+label.my-2
+
+]
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# footer
+
+footer.ps-5 pt-3 bg-dark text-white
+.row
+.col
+p
+
+.col
+nav
+ul.d-flex j-c-md-end gap-5 me-5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

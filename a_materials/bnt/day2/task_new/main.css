@@ -1,0 +1,240 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  /* max-width: 1300px; */
+}
+
+.app-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  /* padding-top: 50; */
+}
+
+.main-banner {
+  display: block;
+  box-shadow: 0 2px 18px 0 rgba(129, 162, 182, 0.2);
+  background-color: #fff;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .content {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-left: 10px;
+}
+
+.right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-right: 10px;
+}
+
+#header-button-edit-site {
+  padding: 0px 12px;
+  color: white;
+  background-color: #116dff;
+  border: #116dff;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.readmore {
+  margin: 0;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.readmore:hover {
+  /* padding: 5px; */
+  color: white;
+  background-color: #333;
+}
+
+.header-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+  background-color: #f9f6f6;
+}
+
+.header-nav .item1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+}
+
+ul a {
+  padding: 0px 5px;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+ul a:hover {
+  background-color: #e6d6d6;
+}
+
+.item2 ul,
+.item3 {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 10px;
+  font-size: 12px;
+}
+
+.booking_btn:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.para {
+  display: flex;
+  flex-direction: column;
+  height: 350vh;
+  z-index: 2;
+  position: relative;
+}
+
+.para .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 250px;
+  margin-bottom: 600px;
+}
+
+.aboutme {
+  font-size: x-large;
+  font-weight: 900;
+  font-size: 50px;
+}
+
+#cnt-para {
+  line-height: 1.7rem;
+  font-size: 15px;
+}
+/* .para button {
+  color: white;
+  background-color: #333;
+  padding: 5px 20px;
+} */
+
+/* .buttons-cnt {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 30px;
+}
+
+.btn-cnt1 {
+  color: #fff;
+  background-color: #333;
+}
+.btn-cnt1:hover {
+  color: #fff;
+  background-color: #333;
+}
+.btn-cnt2:hover {
+  color: #333;
+  background-color: #fff;
+} */
+
+.btns-new {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center;
+  justify-content: space-between; */
+  gap: 5px;
+  padding: 20px;
+}
+
+.btn-1 {
+  padding: 0px 50px;
+  text-align: center;
+  color: #fff;
+  background-color: #333;
+}
+
+.btn-1:hover {
+  color: #333;
+  background-color: #fff;
+}
+
+.btn-2 {
+  padding: 0px 50px;
+  /* text-align: center; */
+  color: #333;
+  background-color: #fff;
+}
+
+.btn-2:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+.content-new {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 100px;
+  background-image: url(./assets/bg_img_2.html);
+}
+
+.h3 {
+  display: flex;
+  flex-direction: column;
+  padding-left: 400px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.card {
+  padding: 200px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid black;
+  height: 500px;
+}

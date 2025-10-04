@@ -1,0 +1,93 @@
+auto close tag
+auto rename tag
+code runner
+es7-react/redux
+live server
+prettier
+
+
+select tag (just like dropdown box)
+block
+inline
+z-index
+css-positioning
+
+
+
+------------------------------------------------------------------------------------------
+
+important keyword (priority for css)
+
+inline
+internal
+external
+
+------------------------------------------------------------------------------------------
+
+
+
+id
+class
+name
+
+----------------------------------------------------
+
+for input tags [btn, text, etc]
+
+fnt-size or applied by (inheriting from parent and by doing)
+
+-----------------------------------------------------------------------
+
+div.box content-box
+
+div.content-box
+
+==========================================================================
+
+div.box border-box
+
+div.border-box
+
+==========================================================================
+.box{
+width:200px
+height:100px
+border:5px solid black
+mrg:20px
+fnt:18px
+color:any
+}
+
+.con-bx{
+bx-si:cnt-bx;
+bgc:green;
+
+}
+
+
+.brd-box{
+bx-siz:brd-box;
+bgc:blue;
+}
+
+[outline]
+brd-rad
+
+==================================================
+
+b 
+
+{
+typography
+
+txt-transform:upercase / capitalize
+
+letter-spc/ wrd-spc
+
+fnt-sty
+fnt-spcing
+
+txtalign:cntr
+
+rem / em/ %/ px/ 
+}

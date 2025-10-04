@@ -1,0 +1,92 @@
+Note: Form feilds always produce string values even for Numbers
+
+
+.innerHTML
+
+.innerText
+.innerContent
+
+.textContent()
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+getElementById()
+getElementByClass() [item[0], item[1], item[2]] (When having more elements using the same class name)
+
+onclick()
+
+
+let item = dc.gebclass("classname");
+for (let i = 0; i<items.length; i++){
+	items[i].textContent ="Updated content";
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+cnst lst = d.gebi();
+lst = innerHtml += "new content";
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Query Selector [usage class or id]
+
+(affects only the first element of the class)
+
+.querySelector()	affects 1ly 1 element
+.querySelectorAll()	affects all the element
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+let element = doc.getEleById("text");
+
+cl(element);
+cl(element.textContent);
+
+
+
+
+element.classList.add("");
+element.classList.remove("");
+element.classList.toggle("");
+element.classList.contains("");
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+doc.gtid() = hasClass ? "yes" : "no";
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+window functions
+
+1. alert
+2. confirm
+3. prompt
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+basics to be covered
+
+functions in JS
+
+for loop with console
+
+variables []
+variable scopes []
+
+dom manipulations
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+innertxt, content, html
+
+
+
+
+
+
+
+

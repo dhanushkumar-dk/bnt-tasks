@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+  height: 100vh;
+}
+
+table,
+td,
+th {
+  border: solid 1px black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+#noofpages {
+  text-align: center;
+}
+
+th {
+  background-color: #8493c6;
+}
+tr:nth-child(odd) {
+  background: #7d7474;
+}
+
+tr:nth-child(even) {
+  background: #cababa;
+}

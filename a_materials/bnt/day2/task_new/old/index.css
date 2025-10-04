@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  margin: 0%;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 40px; */
+  background-color: #fff;
+  margin: 0%;
+}
+
+.banner img {
+  height: 50px;
+}
+
+#readmore {
+  padding: 0px 20px;
+  margin: 0px;
+}
+
+#readmore:hover {
+  background-color: rgb(170, 189, 205);
+}
+
+.desktop-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+}
+
+.banner p {
+  font-family: Madefor, Helvetica Neue, Helvetica, Arial, メイリオ, meiryo,
+    ヒラギノ角ゴ pro w3, hiragino kaku gothic pro, sans-serif;
+  color: #20303c;
+  margin: 0;
+  padding: 0px 40px;
+}
+
+#button-banner {
+  color: white;
+  background-color: #0d6efd;
+  border-radius: 40px;
+  padding: 0px 30px;
+}
+
+.banner-next {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin: 0%;
+}
+
+.paras {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.banner-next p {
+  padding: 0px 20px;
+}
+.navbar,
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.banner-next li {
+  list-style: none;
+}
+
+.profile {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+#bg-image {
+  height: 400px;
+  width: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  display: block;
+  background-image: url(./assets/bgimagenew.avif);
+  /* position: fixed; */
+}
+
+.success {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.body {
+  padding-top: 500px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: white;
+}
+
+.content-left h1 {
+  padding: 20px;
+}
+
+.content-left p {
+  padding: 20px;
+  font-size: x-large;
+}
+
+.content-left button {
+  padding: 20px;
+}
